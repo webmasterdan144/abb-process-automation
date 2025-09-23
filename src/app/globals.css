@@ -3,6 +3,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* ABB Brand Colors */
+  --abb-red: #FF000F;
+  --abb-red-dark: #CC000C;
+  --abb-red-light: #FF3338;
+  --abb-gray-50: #F8F9FA;
+  --abb-gray-100: #F1F3F4;
+  --abb-gray-200: #E8EAED;
+  --abb-gray-300: #DADCE0;
+  --abb-gray-400: #BDC1C6;
+  --abb-gray-500: #9AA0A6;
+  --abb-gray-600: #80868B;
+  --abb-gray-700: #5F6368;
+  --abb-gray-800: #3C4043;
+  --abb-gray-900: #202124;
+  --abb-blue: #1E88E5;
+  --abb-green: #34A853;
 }
 
 @theme inline {
@@ -10,6 +27,30 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* ABB Brand Colors */
+  --color-abb-red: var(--abb-red);
+  --color-abb-red-dark: var(--abb-red-dark);
+  --color-abb-red-light: var(--abb-red-light);
+  --color-abb-gray-50: var(--abb-gray-50);
+  --color-abb-gray-100: var(--abb-gray-100);
+  --color-abb-gray-200: var(--abb-gray-200);
+  --color-abb-gray-300: var(--abb-gray-300);
+  --color-abb-gray-400: var(--abb-gray-400);
+  --color-abb-gray-500: var(--abb-gray-500);
+  --color-abb-gray-600: var(--abb-gray-600);
+  --color-abb-gray-700: var(--abb-gray-700);
+  --color-abb-gray-800: var(--abb-gray-800);
+  --color-abb-gray-900: var(--abb-gray-900);
+  --color-abb-blue: var(--abb-blue);
+  --color-abb-green: var(--abb-green);
+
+  /* Primary/Secondary mappings */
+  --color-primary: var(--abb-red);
+  --color-primary-dark: var(--abb-red-dark);
+  --color-primary-light: var(--abb-red-light);
+  --color-secondary: var(--abb-gray-600);
+  --color-accent: var(--abb-blue);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +63,34 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ABB Design System Components */
+.abb-gradient {
+  background: linear-gradient(135deg, var(--abb-red) 0%, var(--abb-red-dark) 100%);
+}
+
+.abb-text-gradient {
+  background: linear-gradient(135deg, var(--abb-red) 0%, var(--abb-red-dark) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.abb-shadow {
+  box-shadow: 0 4px 6px -1px rgba(255, 0, 15, 0.1), 0 2px 4px -1px rgba(255, 0, 15, 0.06);
+}
+
+.abb-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.abb-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }

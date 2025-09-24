@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Users, Lightbulb, FileText, Cpu, Network, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle, Lightbulb, FileText, Cpu, Network, Shield } from 'lucide-react';
 import CTASection from '@/components/CTASection';
 
 export const metadata = {
@@ -103,7 +103,7 @@ const SystemEngineeringPage = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                  href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                   className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"
                 >
                   Start Your Project

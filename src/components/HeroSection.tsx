@@ -27,7 +27,7 @@ const HeroSection = () => {
 
               <p className="text-xl text-abb-gray-600 leading-relaxed">
                 Comprehensive ABB automation solutions including Freelance DCS, System 800xA,
-                and Compact Control systems delivered by Gross Automation's expert team with 35+ years of proven experience.
+                and Compact Control systems delivered by Gross Automation&apos;s expert team with 35+ years of proven experience.
               </p>
             </div>
 
@@ -58,7 +58,7 @@ const HeroSection = () => {
               </Link>
 
               <a
-                href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                 className="inline-flex items-center justify-center border-2 border-abb-gray-300 text-abb-gray-700 px-8 py-4 rounded-md hover:border-primary hover:text-primary transition-colors font-medium"
               >
                 <Play className="mr-2 w-5 h-5" />

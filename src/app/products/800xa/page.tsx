@@ -88,7 +88,7 @@ const System800xAPage = () => {
             "@context": "https://schema.org",
             "@type": "Product",
             "name": "ABB System 800xA",
-            "description": "ABB System 800xA is the world's most comprehensive automation platform, integrating process control, electrical systems, safety, and telecommunications in one unified solution, expertly implemented by Gross Automation.",
+            "description": "ABB System 800xA is the world&apos;s most comprehensive automation platform, integrating process control, electrical systems, safety, and telecommunications in one unified solution, expertly implemented by Gross Automation.",
             "brand": {
               "@type": "Brand",
               "name": "ABB"
@@ -176,7 +176,7 @@ const System800xAPage = () => {
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  ABB System 800xA is the world's most comprehensive automation platform,
+                  ABB System 800xA is the world&apos;s most comprehensive automation platform,
                   integrating process control, electrical systems, safety, and telecommunications.
                   Gross Automation delivers expert implementation with 35+ years of proven experience.
                 </p>
@@ -184,7 +184,7 @@ const System800xAPage = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                  href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                   className="inline-flex items-center justify-center bg-abb-blue text-white px-8 py-4 rounded-md hover:bg-abb-blue/90 transition-colors font-medium"
                 >
                   Request Quote
@@ -395,7 +395,7 @@ const System800xAPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                 className="inline-flex items-center justify-center bg-white text-abb-blue px-8 py-4 rounded-md hover:bg-white/90 transition-colors font-medium"
               >
                 Schedule Assessment

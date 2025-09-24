@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Download, ExternalLink, Network, Shield, Zap, Cpu } from 'lucide-react';
+import { ArrowRight, CheckCircle, Download, Network, Shield, Zap, Cpu } from 'lucide-react';
 
 export const metadata = {
   title: 'ABB Freelance DCS Solutions by Gross Automation | 35+ Years Experience',
@@ -155,7 +155,7 @@ const FreelancePage = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                  href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                   className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"
                 >
                   Request Quote
@@ -229,7 +229,7 @@ const FreelancePage = () => {
               Controller Portfolio
             </h2>
             <p className="text-xl text-abb-gray-600 max-w-3xl mx-auto">
-              Gross Automation helps you choose from ABB's range of Freelance controllers
+              Gross Automation helps you choose from ABB&apos;s range of Freelance controllers
               designed to meet various application requirements and system sizes.
             </p>
           </div>
@@ -277,7 +277,7 @@ const FreelancePage = () => {
                 </h2>
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
                   ABB Freelance DCS is trusted across industries for critical process
-                  control applications. Gross Automation's 35+ years of expertise ensures
+                  control applications. Gross Automation&apos;s 35+ years of expertise ensures
                   high reliability and performance implementation.
                 </p>
               </div>
@@ -321,12 +321,12 @@ const FreelancePage = () => {
               Ready to Implement ABB Freelance DCS?
             </h2>
             <p className="text-xl text-white/90">
-              Gross Automation's certified engineers are ready to help you design, implement,
+              Gross Automation&apos;s certified engineers are ready to help you design, implement,
               and commission your Freelance DCS solution with 35+ years of proven expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                 className="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-md hover:bg-white/90 transition-colors font-medium"
               >
                 Get Expert Consultation

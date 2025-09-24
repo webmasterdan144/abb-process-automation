@@ -118,7 +118,7 @@ const WisconsinABBAutomationPage = () => {
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  Gross Automation, based in Brookfield, Wisconsin, has been serving the state's
+                  Gross Automation, based in Brookfield, Wisconsin, has been serving the state&apos;s
                   manufacturing and process industries for 35+ years with expert ABB automation
                   solutions including Freelance DCS, System 800xA, and Compact Control systems.
                 </p>
@@ -134,7 +134,7 @@ const WisconsinABBAutomationPage = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                  href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                   className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"
                 >
                   Get Local Consultation
@@ -183,7 +183,7 @@ const WisconsinABBAutomationPage = () => {
               Recent Wisconsin Projects
             </h2>
             <p className="text-xl text-abb-gray-600 max-w-3xl mx-auto">
-              Examples of our successful ABB automation implementations across Wisconsin's
+              Examples of our successful ABB automation implementations across Wisconsin&apos;s
               diverse industrial landscape.
             </p>
           </div>
@@ -287,7 +287,7 @@ const WisconsinABBAutomationPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                 className="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-md hover:bg-white/90 transition-colors font-medium"
               >
                 Contact Wisconsin Office

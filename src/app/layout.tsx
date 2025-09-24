@@ -90,24 +90,17 @@ export default function RootLayout({
           `
         }} />
 
-        {/* Google Analytics */}
+        {/* Google Tag Manager */}
         <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-LWVGZK81VR"
-        />
-        <Script
-          id="google-analytics"
+          id="google-tag-manager"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-LWVGZK81VR', {
-                page_title: document.title,
-                page_location: window.location.href,
-                custom_map: {'custom_parameter_1': 'source'}
-              });
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-G0F775G82W4');
             `,
           }}
         />
@@ -256,6 +249,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-G0F775G82W4"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <AnimatedBackground />
         <WebPageSchema />
         <Header />

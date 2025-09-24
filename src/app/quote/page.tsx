@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { ExternalLink, ArrowRight, FileText } from 'lucide-react';
+import { ArrowRight, FileText } from 'lucide-react';
 
 export default function QuotePage() {
   useEffect(() => {
     // Redirect to Gross Automation contact page with quote-specific parameters
     const timer = setTimeout(() => {
-      const grossAutomationUrl = 'https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect&inquiry_type=quote';
+      const grossAutomationUrl = 'https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect&inquiry_type=quote';
       window.location.href = grossAutomationUrl;
     }, 2000);
 
@@ -15,7 +15,7 @@ export default function QuotePage() {
   }, []);
 
   const handleManualRedirect = () => {
-    const grossAutomationUrl = 'https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect&inquiry_type=quote';
+    const grossAutomationUrl = 'https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect&inquiry_type=quote';
     window.location.href = grossAutomationUrl;
   };
 
@@ -33,7 +33,7 @@ export default function QuotePage() {
                 Request Your ABB Automation Quote
               </h1>
               <p className="text-xl text-abb-gray-600 leading-relaxed">
-                You're being redirected to request a custom quote for your ABB process automation project.
+                You&apos;re being redirected to request a custom quote for your ABB process automation project.
               </p>
             </div>
 
@@ -77,7 +77,7 @@ export default function QuotePage() {
             </div>
 
             <div className="text-sm text-abb-gray-500">
-              If you're not redirected automatically, click the button above or call us directly at{' '}
+              If you&apos;re not redirected automatically, click the button above or call us directly at{' '}
               <a href="tel:+12622521600" className="text-primary hover:text-primary-dark">
                 +1 (262) 252-1600
               </a>

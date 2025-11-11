@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Globe } from 'lucide-react';
 import ABBLogo from './ABBLogo';
 import GrossAutomationLogo from './GrossAutomationLogo';
+import { SITE_CONFIG, EXTERNAL_LINKS, CONTACT_INFO } from '@/lib/constants';
 
 const Footer = () => {
   return (
@@ -28,7 +29,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-abb-gray-300 text-sm leading-relaxed">
-              Your trusted partner for ABB Process Automation solutions including Freelance DCS,
+              {SITE_CONFIG.tagline}. Expert solutions including Freelance DCS,
               System 800xA, and Compact Control systems.
             </p>
           </div>
@@ -104,29 +105,29 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
                 <div className="text-abb-gray-300 text-sm">
-                  <div>3680 N. 126th St.</div>
-                  <div>Brookfield, WI 53005</div>
+                  <div>{CONTACT_INFO.address.street}</div>
+                  <div>{CONTACT_INFO.address.city}, {CONTACT_INFO.address.state} {CONTACT_INFO.address.zip}</div>
                 </div>
               </div>
 
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="tel:+12622521600" className="text-abb-gray-300 hover:text-white transition-colors text-sm">
-                  +1 (262) 252-1600
+                <a href={`tel:${SITE_CONFIG.phone.replace(/[^0-9+]/g, '')}`} className="text-abb-gray-300 hover:text-white transition-colors text-sm">
+                  {SITE_CONFIG.phone}
                 </a>
               </div>
 
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="mailto:sales@grossautomation.com?subject=ABBTOW%20Referral%20Gross%20Automation" className="text-abb-gray-300 hover:text-white transition-colors text-sm">
-                  sales@grossautomation.com
+                <a href={`mailto:${SITE_CONFIG.email}?subject=ABBTOW%20Referral%20${SITE_CONFIG.name}`} className="text-abb-gray-300 hover:text-white transition-colors text-sm">
+                  {SITE_CONFIG.email}
                 </a>
               </div>
 
               <div className="flex items-center space-x-3">
                 <Globe className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="https://grossautomation.com" className="text-abb-gray-300 hover:text-white transition-colors text-sm">
-                  grossautomation.com
+                <a href={EXTERNAL_LINKS.mainSite} className="text-abb-gray-300 hover:text-white transition-colors text-sm">
+                  {EXTERNAL_LINKS.mainSite.replace(/^https?:\/\/(www\.)?/, '')}
                 </a>
               </div>
             </div>
@@ -137,7 +138,7 @@ const Footer = () => {
         <div className="border-t border-abb-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-abb-gray-400 text-sm">
-              © {new Date().getFullYear()} Gross Automation. All rights reserved.
+              © {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
             </div>
 
             <div className="flex items-center space-x-6">
@@ -147,9 +148,9 @@ const Footer = () => {
               <Link href="/terms" className="text-abb-gray-400 hover:text-white transition-colors text-sm">
                 Terms of Service
               </Link>
-              <Link href="/sitemap" className="text-abb-gray-400 hover:text-white transition-colors text-sm">
+              <a href="/sitemap.xml" className="text-abb-gray-400 hover:text-white transition-colors text-sm">
                 Sitemap
-              </Link>
+              </a>
             </div>
           </div>
 

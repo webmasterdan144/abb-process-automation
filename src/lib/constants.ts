@@ -29,10 +29,10 @@ export const SOCIAL_LINKS = {
 
 export const CONTACT_INFO = {
   address: {
-    street: '2525 Wisconsin Ave',
-    city: 'Downers Grove',
-    state: 'IL',
-    zip: '60515',
+    street: '3680 N. 126th St.',
+    city: 'Brookfield',
+    state: 'WI',
+    zip: '53005',
   },
   hours: {
     weekdays: '8:00 AM - 5:00 PM CST',

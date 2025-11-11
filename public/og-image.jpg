@@ -1,0 +1,5 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#FF000F"/>
+  <text x="600" y="315" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle" font-weight="bold">ABB Process Automation</text>
+  <text x="600" y="370" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle">by Gross Automation</text>
+</svg>

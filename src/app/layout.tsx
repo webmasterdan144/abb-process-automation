@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import WebPageSchema from "@/components/WebPageSchema";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import Script from "next/script";
+import { SITE_CONFIG, ANALYTICS } from "@/lib/constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,21 +23,21 @@ export const metadata: Metadata = {
   title: "ABB Process Automation Solutions Wisconsin | Gross Automation | 35+ Years Experience",
   description: "Leading ABB process automation solutions in Wisconsin & Midwest by Gross Automation. Expert Freelance DCS, System 800xA & Compact Control implementation. Brookfield, WI based with 35+ years experience serving manufacturing, chemical, oil & gas industries.",
   keywords: "ABB process automation Wisconsin, Freelance DCS Wisconsin, System 800xA Wisconsin, ABB automation Brookfield WI, industrial automation Wisconsin, DCS integration Wisconsin, SCADA systems Wisconsin, process control Wisconsin, ABB system integrator Wisconsin, Gross Automation, control systems Wisconsin, PLC programming Wisconsin, manufacturing automation Wisconsin, chemical process automation, oil gas automation Wisconsin, power generation automation",
-  authors: [{ name: "Gross Automation" }],
-  creator: "Gross Automation",
-  publisher: "Gross Automation",
+  authors: [{ name: SITE_CONFIG.name }],
+  creator: SITE_CONFIG.name,
+  publisher: SITE_CONFIG.name,
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   alternates: {
-    canonical: "https://www.freelance800fsales.com",
+    canonical: SITE_CONFIG.url,
   },
   openGraph: {
     title: "ABB Process Automation Solutions Wisconsin | Gross Automation | 35+ Years Experience",
     description: "Leading ABB process automation solutions in Wisconsin & Midwest by Gross Automation. Expert Freelance DCS, System 800xA & Compact Control implementation with 35+ years experience.",
-    url: "https://www.freelance800fsales.com",
+    url: SITE_CONFIG.url,
     siteName: "Gross Automation - ABB Process Automation Experts Wisconsin",
     images: [
       {
-        url: "https://www.freelance800fsales.com/og-image.jpg",
+        url: `${SITE_CONFIG.url}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "ABB Process Automation Solutions Wisconsin - Gross Automation",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     site: "@GrossAutomation",
     title: "ABB Process Automation Solutions Wisconsin | Gross Automation",
     description: "Leading ABB automation solutions in Wisconsin & Midwest. Freelance DCS, System 800xA, Compact Control. 35+ years experience.",
-    images: ["https://www.freelance800fsales.com/og-image.jpg"],
+    images: [`${SITE_CONFIG.url}/og-image.jpg`],
   },
   verification: {
     google: "verification-code-here",
@@ -61,7 +62,7 @@ export const metadata: Metadata = {
     "geo.position": "43.0642;-88.1834",
     "ICBM": "43.0642, -88.1834",
     "DC.title": "ABB Process Automation Solutions Wisconsin",
-    "DC.creator": "Gross Automation",
+    "DC.creator": SITE_CONFIG.name,
     "DC.subject": "ABB automation, process control, industrial automation",
     "DC.description": "Leading ABB process automation solutions in Wisconsin",
     "revisit-after": "7 days",
@@ -100,7 +101,7 @@ export default function RootLayout({
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-G0F775G82W4');
+              })(window,document,'script','dataLayer','${ANALYTICS.gtmId}');
             `,
           }}
         />
@@ -116,9 +117,9 @@ export default function RootLayout({
                 "@type": ["Organization", "LocalBusiness"],
                 "name": "Gross Automation",
                 "alternateName": ["ABB Process Automation Solutions", "Gross Automation Inc"],
-                "url": "https://www.freelance800fsales.com",
-                "logo": "https://www.freelance800fsales.com/logo.svg",
-                "image": "https://www.freelance800fsales.com/og-image.jpg",
+                "url": "${SITE_CONFIG.url}",
+                "logo": "${SITE_CONFIG.url}/logo.svg",
+                "image": "${SITE_CONFIG.url}/og-image.jpg",
                 "foundingDate": "1998",
                 "founder": {
                   "@type": "Person",
@@ -252,7 +253,7 @@ export default function RootLayout({
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-G0F775G82W4"
+            src={`https://www.googletagmanager.com/ns.html?id=${ANALYTICS.gtmId}`}
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}

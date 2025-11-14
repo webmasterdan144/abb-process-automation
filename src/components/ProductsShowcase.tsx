@@ -3,6 +3,26 @@ import Link from 'next/link';
 import { ArrowRight, Cpu, Network, Settings, Gauge } from 'lucide-react';
 
 const ProductsShowcase = () => {
+  // Color mapping for Tailwind classes (dynamic classes don't work with Tailwind)
+  const colorClasses = {
+    primary: {
+      bg: 'bg-primary/10',
+      text: 'text-primary'
+    },
+    'abb-blue': {
+      bg: 'bg-abb-blue/10',
+      text: 'text-abb-blue'
+    },
+    'abb-green': {
+      bg: 'bg-abb-green/10',
+      text: 'text-abb-green'
+    },
+    secondary: {
+      bg: 'bg-secondary/10',
+      text: 'text-secondary'
+    }
+  } as const;
+
   const products = [
     {
       icon: <Network className="w-8 h-8" />,
@@ -10,7 +30,7 @@ const ProductsShowcase = () => {
       description: "Distributed control system combining DCS functionality with PLC advantages for optimal process control.",
       features: ["AC 700F/800F Controllers", "Foundation Fieldbus", "Redundant Architecture", "Control Builder F"],
       link: "/products/freelance",
-      color: "primary"
+      color: "primary" as const
     },
     {
       icon: <Cpu className="w-8 h-8" />,
@@ -18,7 +38,7 @@ const ProductsShowcase = () => {
       description: "Comprehensive automation platform integrating process, electrical, safety, and telecommunications.",
       features: ["Extended Automation", "System Platform", "Engineering Tools", "Information Management"],
       link: "/products/800xa",
-      color: "abb-blue"
+      color: "abb-blue" as const
     },
     {
       icon: <Settings className="w-8 h-8" />,
@@ -26,7 +46,7 @@ const ProductsShowcase = () => {
       description: "Engineering tool for AC 800M controllers with integrated drive and motor starter functionality.",
       features: ["AC 800M Controllers", "Drive Integration", "Compact Design", "Scalable Solutions"],
       link: "/products/compact-control",
-      color: "abb-green"
+      color: "abb-green" as const
     },
     {
       icon: <Gauge className="w-8 h-8" />,
@@ -34,7 +54,7 @@ const ProductsShowcase = () => {
       description: "Comprehensive range of input/output modules for seamless field device integration.",
       features: ["S800 I/O", "S900 I/O", "Fieldbus Integration", "Diagnostic Features"],
       link: "/products/io-systems",
-      color: "secondary"
+      color: "secondary" as const
     }
   ];
 
@@ -62,7 +82,7 @@ const ProductsShowcase = () => {
             <div key={index} className="abb-card group hover:shadow-xl transition-all duration-300">
               <div className="space-y-6">
                 {/* Icon */}
-                <div className={`w-16 h-16 rounded-lg bg-${product.color}/10 flex items-center justify-center text-${product.color} group-hover:scale-110 transition-transform`}>
+                <div className={`w-16 h-16 rounded-lg ${colorClasses[product.color].bg} flex items-center justify-center ${colorClasses[product.color].text} group-hover:scale-110 transition-transform`}>
                   {product.icon}
                 </div>
 

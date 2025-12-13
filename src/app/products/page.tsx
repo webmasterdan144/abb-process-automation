@@ -180,7 +180,7 @@ const ProductsPage = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                  href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                   className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"
                 >
                   Explore Solutions
@@ -289,7 +289,7 @@ const ProductsPage = () => {
                   Why Choose ABB Products?
                 </h2>
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  ABB's automation portfolio represents decades of innovation and
+                  ABB&apos;s automation portfolio represents decades of innovation and
                   real-world experience in process automation applications.
                 </p>
               </div>
@@ -335,7 +335,7 @@ const ProductsPage = () => {
               <div className="space-y-6">
                 <div className="border-l-4 border-primary pl-4">
                   <h4 className="font-semibold text-abb-gray-800">Freelance DCS</h4>
-                  <p className="text-abb-gray-600 text-sm">World's most flexible distributed control system</p>
+                  <p className="text-abb-gray-600 text-sm">World&apos;s most flexible distributed control system</p>
                 </div>
 
                 <div className="border-l-4 border-abb-blue pl-4">
@@ -381,7 +381,7 @@ const ProductsPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                 className="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-md hover:bg-white/90 transition-colors font-medium"
               >
                 Request Product Information

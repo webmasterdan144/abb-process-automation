@@ -203,7 +203,7 @@ const SolutionsPage = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+              href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
               className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"
             >
               Discuss Your Requirements
@@ -276,7 +276,7 @@ const SolutionsPage = () => {
               Solution Approaches
             </h2>
             <p className="text-xl text-abb-gray-600 max-w-3xl mx-auto">
-              Whether you're building new facilities or upgrading existing systems,
+              Whether you&apos;re building new facilities or upgrading existing systems,
               we have the right approach for your project.
             </p>
           </div>
@@ -391,7 +391,7 @@ const SolutionsPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                 className="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-md hover:bg-white/90 transition-colors font-medium"
               >
                 Start Your Project

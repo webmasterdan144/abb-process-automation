@@ -47,7 +47,7 @@ export default function Home() {
                 "@type": "Person",
                 "name": "Sarah Mitchell"
               },
-              "reviewBody": "We've worked with Gross Automation on multiple ABB System 800xA projects over the years. Their expertise in Wisconsin's manufacturing sector is unmatched. Highly recommend for any industrial automation needs.",
+              "reviewBody": "We've worked with Gross Automation on multiple ABB System 800xA projects over the years. Their expertise in Wisconsin&apos;s manufacturing sector is unmatched. Highly recommend for any industrial automation needs.",
               "datePublished": "2024-07-22"
             },
             {

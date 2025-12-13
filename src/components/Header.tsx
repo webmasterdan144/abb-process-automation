@@ -6,6 +6,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import ABBLogo from './ABBLogo';
 import GrossAutomationLogo from './GrossAutomationLogo';
 import TrustIndicators from './TrustIndicators';
+import { EXTERNAL_LINKS } from '@/lib/constants';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -83,7 +84,7 @@ const Header = () => {
             <Link href="/about" className="text-abb-gray-700 hover:text-primary transition-colors">
               About
             </Link>
-            <a href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect" className="text-abb-gray-700 hover:text-primary transition-colors">
+            <a href={`${EXTERNAL_LINKS.mainSite}/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect`} className="text-abb-gray-700 hover:text-primary transition-colors">
               Contact
             </a>
           </nav>
@@ -91,7 +92,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect&inquiry_type=quote"
+              href={`${EXTERNAL_LINKS.mainSite}/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect&inquiry_type=quote`}
               className="bg-primary text-white px-6 py-2 rounded-md hover:bg-primary-dark transition-colors font-medium"
             >
               Get Quote
@@ -147,12 +148,12 @@ const Header = () => {
               <Link href="/about" className="text-abb-gray-700 hover:text-primary py-2">
                 About
               </Link>
-              <a href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect" className="text-abb-gray-700 hover:text-primary py-2">
+              <a href={`${EXTERNAL_LINKS.mainSite}/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect`} className="text-abb-gray-700 hover:text-primary py-2">
                 Contact
               </a>
 
               <a
-                href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect&inquiry_type=quote"
+                href={`${EXTERNAL_LINKS.mainSite}/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect&inquiry_type=quote`}
                 className="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-dark transition-colors font-medium text-center"
               >
                 Get Quote

@@ -7,7 +7,7 @@ export default function ContactPage() {
   useEffect(() => {
     // Redirect to Gross Automation contact page with abbatow source after a brief delay
     const timer = setTimeout(() => {
-      const grossAutomationUrl = 'https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect';
+      const grossAutomationUrl = 'https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect';
       window.location.href = grossAutomationUrl;
     }, 2000);
 
@@ -15,7 +15,7 @@ export default function ContactPage() {
   }, []);
 
   const handleManualRedirect = () => {
-    const grossAutomationUrl = 'https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect';
+    const grossAutomationUrl = 'https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect';
     window.location.href = grossAutomationUrl;
   };
 
@@ -33,7 +33,7 @@ export default function ContactPage() {
                 Redirecting to Gross Automation
               </h1>
               <p className="text-xl text-abb-gray-600 leading-relaxed">
-                You're being redirected to our main contact page to get in touch with our ABB automation experts.
+                You&apos;re being redirected to our main contact page to get in touch with our ABB automation experts.
               </p>
             </div>
 
@@ -58,7 +58,7 @@ export default function ContactPage() {
             </div>
 
             <div className="text-sm text-abb-gray-500">
-              If you're not redirected automatically, click the button above or call us directly at{' '}
+              If you&apos;re not redirected automatically, click the button above or call us directly at{' '}
               <a href="tel:+12622521600" className="text-primary hover:text-primary-dark">
                 +1 (262) 252-1600
               </a>

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.freelance800fsales.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://grossautomation.com'
   const lastModified = new Date()
 
   // Static pages with priorities and change frequencies optimized for SEO
@@ -54,6 +54,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
   ]
 
   // Product pages - high priority for commercial terms
@@ -82,6 +94,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/products/controllers`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
   ]
 
   // Location-based pages for local SEO
@@ -92,70 +110,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/milwaukee-process-automation`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/madison-abb-systems`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/chicago-automation-services`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/midwest-dcs-integration`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    },
-  ]
-
-  // Industry-specific pages for targeted SEO
-  const industryPages = [
-    {
-      url: `${baseUrl}/industries/oil-gas-automation`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/industries/chemical-process-control`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/industries/manufacturing-automation`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/industries/power-generation-systems`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/industries/water-wastewater-treatment`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.5,
-    },
   ]
 
   // Service-specific pages
   const servicePages = [
     {
-      url: `${baseUrl}/services/system-integration`,
+      url: `${baseUrl}/services/integration`,
       lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
@@ -167,7 +127,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/services/maintenance-support`,
+      url: `${baseUrl}/services/maintenance`,
       lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.6,
@@ -178,13 +138,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.5,
     },
+    {
+      url: `${baseUrl}/services/engineering`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
   ]
 
   return [
     ...staticPages,
     ...productPages,
     ...locationPages,
-    ...industryPages,
     ...servicePages,
   ]
 }

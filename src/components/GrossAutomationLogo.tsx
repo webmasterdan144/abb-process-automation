@@ -14,7 +14,7 @@ const GrossAutomationLogo: React.FC<GrossAutomationLogoProps> = ({
 }) => {
   return (
     <Image
-      src="/images/35th22025Amie.png"
+      src="/images/gross-logo-35.png"
       alt="Gross Automation - 35+ Years"
       width={width}
       height={height}

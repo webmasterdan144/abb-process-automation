@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Download, Cpu, Settings, Zap, Network, Wrench, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle, Download, Cpu, Settings, Zap, Network, Wrench } from 'lucide-react';
 
 export const metadata = {
   title: 'ABB Compact Control Builder Solutions by Gross Automation | 35+ Years Experience',
@@ -223,7 +223,7 @@ const CompactControlPage = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                  href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                   className="inline-flex items-center justify-center bg-abb-green text-white px-8 py-4 rounded-md hover:bg-abb-green/90 transition-colors font-medium"
                 >
                   Request Quote
@@ -494,7 +494,7 @@ const CompactControlPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                 className="inline-flex items-center justify-center bg-white text-abb-green px-8 py-4 rounded-md hover:bg-white/90 transition-colors font-medium"
               >
                 Schedule Consultation

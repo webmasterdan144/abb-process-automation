@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone, Mail, MessageSquare } from 'lucide-react';
 import TrustIndicators from './TrustIndicators';
+import { SITE_CONFIG, EXTERNAL_LINKS, CONTACT_INFO } from '@/lib/constants';
 
 const CTASection = () => {
   return (
@@ -17,7 +18,7 @@ const CTASection = () => {
               </h2>
               <p className="text-xl text-white/90 leading-relaxed">
                 Get expert consultation on ABB automation solutions tailored to your specific needs.
-                Gross Automation's team is ready to help you achieve operational excellence with 35+ years of proven expertise.
+                Gross Automation&apos;s team is ready to help you achieve operational excellence with 35+ years of proven expertise.
               </p>
             </div>
 
@@ -63,7 +64,7 @@ const CTASection = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect&inquiry_type=quote"
+                href={`${EXTERNAL_LINKS.mainSite}/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect&inquiry_type=quote`}
                 className="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-md hover:bg-white/90 transition-colors font-medium"
               >
                 Get Free Quote
@@ -71,7 +72,7 @@ const CTASection = () => {
               </a>
 
               <a
-                href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                href={`${EXTERNAL_LINKS.mainSite}/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect`}
                 className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-md hover:border-white hover:bg-white/10 transition-colors font-medium"
               >
                 Schedule Consultation
@@ -89,7 +90,7 @@ const CTASection = () => {
               <div className="space-y-4">
                 {/* Phone */}
                 <a
-                  href="tel:+12622521600"
+                  href={`tel:${SITE_CONFIG.phone.replace(/[^0-9+]/g, '')}`}
                   className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors group"
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
@@ -97,14 +98,14 @@ const CTASection = () => {
                   </div>
                   <div>
                     <div className="text-white font-medium">Call Us</div>
-                    <div className="text-white/80">+1 (262) 252-1600</div>
+                    <div className="text-white/80">{SITE_CONFIG.phone}</div>
                   </div>
                   <ArrowRight className="w-5 h-5 text-white/60 group-hover:text-white group-hover:translate-x-1 transition-all ml-auto" />
                 </a>
 
                 {/* Email */}
                 <a
-                  href="mailto:sales@grossautomation.com?subject=ABBTOW%20Referral%20Gross%20Automation"
+                  href={`mailto:${SITE_CONFIG.email}?subject=ABBTOW%20Referral%20${SITE_CONFIG.name}`}
                   className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors group"
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
@@ -112,14 +113,14 @@ const CTASection = () => {
                   </div>
                   <div>
                     <div className="text-white font-medium">Email Us</div>
-                    <div className="text-white/80">sales@grossautomation.com</div>
+                    <div className="text-white/80">{SITE_CONFIG.email}</div>
                   </div>
                   <ArrowRight className="w-5 h-5 text-white/60 group-hover:text-white group-hover:translate-x-1 transition-all ml-auto" />
                 </a>
 
                 {/* Contact Form */}
                 <a
-                  href="https://www.grossautomation.com/contact?source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                  href={`${EXTERNAL_LINKS.mainSite}/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect`}
                   className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors group"
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
@@ -135,10 +136,10 @@ const CTASection = () => {
 
               <div className="pt-4 border-t border-white/20">
                 <div className="text-white/80 text-sm">
-                  <strong>Office Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM CST
+                  <strong>Office Hours:</strong> {CONTACT_INFO.hours.weekdays}
                 </div>
                 <div className="text-white/80 text-sm mt-1">
-                  <strong>Support Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM CST
+                  <strong>Support Hours:</strong> {CONTACT_INFO.hours.weekdays}
                 </div>
               </div>
             </div>

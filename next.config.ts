@@ -5,11 +5,6 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
 
-  // Disable ESLint during build (security fixes in progress)
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
   // SEO and performance optimizations
   experimental: {
     optimizePackageImports: ['lucide-react'],

@@ -265,6 +265,14 @@ export default function RootLayout({
         <Breadcrumbs />
         {children}
         <Footer />
+
+        <Script
+          src="/ga-microsite.js"
+          data-site-id="ga_a11ff630610fb3bff3299304cdabd6d4"
+          data-auth-key="b34a01880f9d23894ce0d63db6649b33474d125743aacf68d20c93cb2fe1f7abd21c745638247561955d97a90e1eff5070159202f1142163ddd0b08a774592f1"
+          data-admin-url="https://admin.grossautomation.com"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

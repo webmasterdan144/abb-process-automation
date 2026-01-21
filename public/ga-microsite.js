@@ -1,13 +1,15 @@
 /**
- * Gross Automation Microsite SDK v1.0.0
+ * Gross Automation Microsite SDK v1.3.2
  *
- * Universal JavaScript SDK for tracking, announcements, and referral tracking.
+ * Universal JavaScript SDK for tracking, announcements, referral tracking,
+ * and auto-update notifications.
  * Works on any website: static HTML, PHP, Next.js, WordPress, etc.
  *
  * Usage:
  *   <script src="ga-microsite.js"
  *     data-site-id="YOUR_SITE_ID"
  *     data-auth-key="YOUR_AUTH_KEY"
+ *     data-manufacturer-code="BRAD"
  *     data-admin-url="https://admin.grossautomation.com">
  *   </script>
  *
@@ -16,6 +18,7 @@
  *     window.GA_CONFIG = {
  *       siteId: 'YOUR_SITE_ID',
  *       authKey: 'YOUR_AUTH_KEY',
+ *       manufacturerCode: 'BRAD',  // Canonical shortcode for utm_source (required for proper branding)
  *       adminUrl: 'https://admin.grossautomation.com',
  *       enableTracking: true,
  *       enableAnnouncements: true,
@@ -25,6 +28,10 @@
  *     };
  *   </script>
  *   <script src="ga-microsite.js"></script>
+ *
+ * IMPORTANT: The manufacturerCode should be the canonical shortcode from the admin
+ * system (e.g., 'BRAD', 'PAND', 'HAMMFG'). This ensures proper branding on
+ * contact/quote pages at www.grossautomation.com.
  */
 
 (function(window, document) {
@@ -37,6 +44,7 @@
   const DEFAULT_CONFIG = {
     siteId: null,
     authKey: null,
+    manufacturerCode: null,  // Canonical shortcode for utm_source (e.g., 'BRAD', 'PAND')
     adminUrl: 'https://admin.grossautomation.com',
     enableTracking: true,
     enableAnnouncements: true,
@@ -63,6 +71,7 @@
     if (script) {
       if (script.dataset.siteId) config.siteId = script.dataset.siteId;
       if (script.dataset.authKey) config.authKey = script.dataset.authKey;
+      if (script.dataset.manufacturerCode) config.manufacturerCode = script.dataset.manufacturerCode;
       if (script.dataset.adminUrl) config.adminUrl = script.dataset.adminUrl;
       if (script.dataset.enableTracking !== undefined)
         config.enableTracking = script.dataset.enableTracking !== 'false';
@@ -489,10 +498,23 @@
       }
     },
 
+    /**
+     * Get the utm_source value
+     * Uses canonical manufacturer shortcode if configured, falls back to hostname
+     */
+    getUtmSource: function() {
+      // Prefer canonical manufacturer shortcode
+      if (CONFIG.manufacturerCode) {
+        return CONFIG.manufacturerCode;
+      }
+      // Fall back to hostname (legacy behavior)
+      return window.location.hostname;
+    },
+
     addUtmParams: function(href) {
       try {
         const url = new URL(href, window.location.origin);
-        url.searchParams.set('utm_source', window.location.hostname);
+        url.searchParams.set('utm_source', this.getUtmSource());
         url.searchParams.set('utm_medium', 'microsite');
         url.searchParams.set('utm_campaign', 'brand-referral');
         return url.toString();
@@ -550,7 +572,7 @@
   // ==========================================================================
 
   window.GAMicrosite = {
-    version: '1.0.0',
+    version: '1.3.2',
     config: CONFIG,
 
     // Manual tracking call
@@ -559,6 +581,36 @@
         log('Manual track event:', eventData);
         // Future: implement custom event tracking
       }
+    },
+
+    // Check for SDK updates
+    checkForUpdates: async function() {
+      try {
+        const response = await fetch(CONFIG.adminUrl + '/api/sdk/version');
+        if (!response.ok) return null;
+        const data = await response.json();
+        if (data.version && this.compareVersions(data.version, this.version) > 0) {
+          warn('SDK update available: v' + data.version + ' (current: v' + this.version + ')');
+          warn('Download from: ' + (data.downloadUrl || CONFIG.adminUrl + '/api/sdk/download'));
+          return data;
+        }
+        log('SDK is up to date (v' + this.version + ')');
+        return null;
+      } catch (e) {
+        log('Update check failed:', e);
+        return null;
+      }
+    },
+
+    // Compare semantic versions (returns 1 if a > b, -1 if a < b, 0 if equal)
+    compareVersions: function(a, b) {
+      const pa = a.split('.').map(Number);
+      const pb = b.split('.').map(Number);
+      for (let i = 0; i < 3; i++) {
+        if ((pa[i] || 0) > (pb[i] || 0)) return 1;
+        if ((pa[i] || 0) < (pb[i] || 0)) return -1;
+      }
+      return 0;
     },
 
     // Force show announcement (for testing)
@@ -590,6 +642,13 @@
     if (!CONFIG.siteId) {
       warn('Site ID not configured. Set data-site-id or window.GA_CONFIG.siteId');
       return;
+    }
+
+    // Warn if manufacturer code is not configured
+    if (!CONFIG.manufacturerCode) {
+      warn('manufacturerCode not configured. Referral tracking will use hostname as utm_source.');
+      warn('For proper branding on contact/quote pages, set data-manufacturer-code or window.GA_CONFIG.manufacturerCode');
+      warn('Get your canonical shortcode from admin.grossautomation.com/site-registration');
     }
 
     log('Initializing with config:', CONFIG);

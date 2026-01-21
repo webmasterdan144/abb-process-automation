@@ -1,5 +1,5 @@
 /**
- * Gross Automation Microsite SDK v1.3.2
+ * Gross Automation Microsite SDK v1.3.3
  *
  * Universal JavaScript SDK for tracking, announcements, referral tracking,
  * and auto-update notifications.
@@ -266,20 +266,24 @@
         signature: signature
       };
 
-      const endpoint = CONFIG.adminUrl + '/api/microsites/track';
+      const baseEndpoint = CONFIG.adminUrl + '/api/microsites/track';
 
       // Send using sendBeacon (preferred) or fetch fallback
       if (navigator.sendBeacon) {
+        // sendBeacon can't send custom headers, so include auth as query params
+        const beaconUrl = baseEndpoint + '?_sk=' + encodeURIComponent(CONFIG.siteId) +
+          '&_sig=' + encodeURIComponent(signature);
         const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
-        const sent = navigator.sendBeacon(endpoint, blob);
+        const sent = navigator.sendBeacon(beaconUrl, blob);
         log('Pageview tracked via sendBeacon:', sent, payload);
       } else {
         // Fallback for older browsers
-        fetch(endpoint, {
+        fetch(baseEndpoint, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'X-GA-Site-ID': CONFIG.siteId
+            'X-GA-Site-ID': CONFIG.siteId,
+            'X-GA-Signature': signature
           },
           body: JSON.stringify(payload),
           keepalive: true
@@ -572,7 +576,7 @@
   // ==========================================================================
 
   window.GAMicrosite = {
-    version: '1.3.2',
+    version: '1.3.3',
     config: CONFIG,
 
     // Manual tracking call

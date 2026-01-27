@@ -129,7 +129,7 @@ export default function TermsPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-abb-gray-900 mb-4">9. Links to Third-Party Sites</h2>
                 <p className="text-abb-gray-700 mb-4">
-                  Our website may contain links to third-party websites, including ABB's official website. We are not responsible
+                  Our website may contain links to third-party websites, including ABB&apos;s official website. We are not responsible
                   for the content, privacy policies, or practices of these external sites.
                 </p>
               </section>

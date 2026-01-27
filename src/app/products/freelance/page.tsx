@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, Download, Network, Shield, Zap, Cpu } from 'lucide-react';
 
 export const metadata = {
-  title: 'ABB Freelance DCS Solutions by Gross Automation | 35+ Years Experience',
-  description: 'Expert ABB Freelance DCS implementation by Gross Automation - 35+ years experience with AC 700F, AC 800F, and AC 900F controllers, Foundation Fieldbus support, and complete system integration.',
+  title: 'ABB Freelance DCS Solutions by Gross Automation | Authorized Distributor',
+  description: 'Expert ABB Freelance DCS implementation by Gross Automation - Authorized Distributor with AC 700F, AC 800F, and AC 900F controllers, Foundation Fieldbus support, and complete system integration.',
   keywords: 'ABB Freelance DCS, AC 700F, AC 800F, AC 900F, distributed control system, Foundation Fieldbus, Control Builder F, Gross Automation'
 };
 
@@ -81,41 +81,12 @@ const FreelancePage = () => {
               "name": "ABB"
             },
             "category": "Industrial Automation Systems",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "seller": {
-                "@type": "Organization",
-                "name": "Gross Automation",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "3680 N. 126th St.",
-                  "addressLocality": "Brookfield",
-                  "addressRegion": "WI",
-                  "postalCode": "53005",
-                  "addressCountry": "US"
-                },
-                "telephone": "+1-262-252-1600"
-              },
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "Contact for Quote",
-                "priceCurrency": "USD"
-              }
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "25",
-              "bestRating": "5"
-            },
             "features": [
               "Distributed Architecture",
               "Redundant Design",
               "Foundation Fieldbus Support",
               "Control Builder F Engineering Tool",
-              "Up to 20,000 I/O Points",
-              "99.9%+ Availability"
+              "Up to 20,000 I/O Points"
             ],
             "applicationCategory": [
               "Oil & Gas Processing",
@@ -124,6 +95,50 @@ const FreelancePage = () => {
               "Water & Wastewater",
               "Food & Beverage",
               "Pharmaceutical"
+            ]
+          })
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is ABB Freelance DCS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "ABB Freelance DCS is a distributed control system that combines the functionality of a DCS with the flexibility of a PLC. It uses AC 700F, AC 800F, and AC 900F controllers with the Control Builder F engineering tool. Freelance is used in process industries including chemical, oil and gas, power, water, and food and beverage."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I order ABB Freelance DCS products?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Gross Automation is an authorized distributor of ABB Process Automation products including Freelance DCS. Contact Gross Automation at +1 (262) 252-1600 or search the product catalog at grossautomation.com for specific Freelance components and part numbers."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What industries use ABB Freelance DCS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "ABB Freelance DCS is deployed across oil and gas, chemical and petrochemical, power generation, water and wastewater, food and beverage, pharmaceutical, pulp and paper, and mining industries."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Freelance DCS support batch management?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. ABB offers 800xA Batch Management for Freelance, which provides ISA-88 compliant batch control functionality integrated with the Freelance DCS platform."
+                }
+              }
             ]
           })
         }}
@@ -149,7 +164,7 @@ const FreelancePage = () => {
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
                   The ABB Freelance distributed control system combines the advantages of
                   both DCS and PLC technologies. Gross Automation delivers expert implementation
-                  with 35+ years of proven experience in process automation excellence.
+                  with decades of experience in process automation.
                 </p>
               </div>
 
@@ -162,10 +177,15 @@ const FreelancePage = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
 
-                <button className="inline-flex items-center justify-center border-2 border-abb-gray-300 text-abb-gray-700 px-8 py-4 rounded-md hover:border-primary hover:text-primary transition-colors font-medium">
+                <a
+                  href="https://gross-automation-prod.s3.amazonaws.com/manufacturers/1731614295267file"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center border-2 border-abb-gray-300 text-abb-gray-700 px-8 py-4 rounded-md hover:border-primary hover:text-primary transition-colors font-medium"
+                >
                   <Download className="mr-2 w-5 h-5" />
                   Download Brochure
-                </button>
+                </a>
               </div>
             </div>
 
@@ -179,10 +199,6 @@ const FreelancePage = () => {
                 <div className="flex justify-between items-center p-4 bg-abb-gray-50 rounded-lg">
                   <span className="text-abb-gray-700">Controllers</span>
                   <span className="font-semibold text-primary">1 to Multiple</span>
-                </div>
-                <div className="flex justify-between items-center p-4 bg-abb-gray-50 rounded-lg">
-                  <span className="text-abb-gray-700">Availability</span>
-                  <span className="font-semibold text-primary">99.9%+</span>
                 </div>
                 <div className="flex justify-between items-center p-4 bg-abb-gray-50 rounded-lg">
                   <span className="text-abb-gray-700">Engineering Tool</span>
@@ -253,7 +269,7 @@ const FreelancePage = () => {
                   </ul>
 
                   <Link
-                    href={`/products/freelance/${controller.model.toLowerCase().replace(' ', '-')}`}
+                    href="#"
                     className="inline-flex items-center text-primary hover:text-primary-dark font-medium"
                   >
                     Learn More
@@ -277,8 +293,8 @@ const FreelancePage = () => {
                 </h2>
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
                   ABB Freelance DCS is trusted across industries for critical process
-                  control applications. Gross Automation&apos;s 35+ years of expertise ensures
-                  high reliability and performance implementation.
+                  control applications. Gross Automation&apos;s extensive experience supports reliable
+                  and performance implementation.
                 </p>
               </div>
 
@@ -313,6 +329,23 @@ const FreelancePage = () => {
         </div>
       </section>
 
+      {/* Find Products */}
+      <section className="py-12 bg-abb-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://www.grossautomation.com/products?s=ABB+Freelance+DCS&manufacturers=ABBTOW"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"
+            >
+              Find Freelance DCS Products
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 abb-gradient text-white">
         <div className="container mx-auto px-4 text-center">
@@ -322,7 +355,7 @@ const FreelancePage = () => {
             </h2>
             <p className="text-xl text-white/90">
               Gross Automation&apos;s certified engineers are ready to help you design, implement,
-              and commission your Freelance DCS solution with 35+ years of proven expertise.
+              and commission your Freelance DCS solution with extensive expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

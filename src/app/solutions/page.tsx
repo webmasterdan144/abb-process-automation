@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Factory, Zap, Droplets, Fuel, Wheat, PillBottle, TreePine, Pickaxe } from 'lucide-react';
+import { ArrowRight, CheckCircle, Factory, Zap, Droplets, Fuel, Wheat, PillBottle, TreePine, Pickaxe, Anchor, Building2, Package, Flame, Settings } from 'lucide-react';
 
 export const metadata = {
   title: 'ABB Automation Solutions by Industry | Gross Automation',
   description: 'Comprehensive ABB process automation solutions tailored for oil & gas, chemical, power, water, food & beverage, pharmaceutical, and manufacturing industries.',
-  keywords: 'ABB solutions, process automation, industrial automation, oil gas automation, chemical process control, power plant automation'
+  keywords: 'ABB solutions, process automation, industrial automation, oil gas automation, chemical process control, power plant automation, life sciences automation, mining automation, aluminum smelter control, cement automation, data center automation, marine automation, ports terminals automation, refining automation, printing automation, metals processing automation'
 };
 
 const SolutionsPage = () => {
@@ -14,57 +14,97 @@ const SolutionsPage = () => {
       icon: <Fuel className="w-8 h-8" />,
       title: 'Oil & Gas',
       description: 'Upstream production, refining, pipelines, and LNG facilities with proven reliability and safety.',
-      solutions: ['Production Optimization', 'Pipeline Management', 'Refinery Automation', 'Safety Systems'],
-      caseStudy: 'Reduced operational costs by 15% for major pipeline operator'
+      solutions: ['Production Optimization', 'Pipeline Management', 'Refinery Automation', 'Safety Systems']
     },
     {
       icon: <Factory className="w-8 h-8" />,
       title: 'Chemical & Petrochemical',
       description: 'Process control solutions for complex chemical manufacturing and specialty chemical production.',
-      solutions: ['Batch Management', 'Continuous Processes', 'Safety Instrumented Systems', 'Advanced Control'],
-      caseStudy: 'Improved yield by 8% for specialty chemical manufacturer'
+      solutions: ['Batch Management', 'Continuous Processes', 'Safety Instrumented Systems', 'Advanced Control']
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Power Generation',
       description: 'Automation solutions for conventional and renewable power generation facilities.',
-      solutions: ['Turbine Control', 'Boiler Management', 'Grid Integration', 'Emissions Control'],
-      caseStudy: 'Increased efficiency by 12% for combined cycle power plant'
+      solutions: ['Turbine Control', 'Boiler Management', 'Grid Integration', 'Emissions Control']
     },
     {
       icon: <Droplets className="w-8 h-8" />,
       title: 'Water & Wastewater',
       description: 'Complete automation solutions for water treatment, distribution, and wastewater management.',
-      solutions: ['Treatment Optimization', 'Distribution Control', 'SCADA Systems', 'Energy Management'],
-      caseStudy: 'Reduced energy consumption by 20% for municipal water plant'
+      solutions: ['Treatment Optimization', 'Distribution Control', 'SCADA Systems', 'Energy Management']
     },
     {
       icon: <Wheat className="w-8 h-8" />,
       title: 'Food & Beverage',
       description: 'Hygienic automation solutions ensuring product quality, safety, and regulatory compliance.',
-      solutions: ['Recipe Management', 'CIP/SIP Systems', 'Traceability', 'Quality Control'],
-      caseStudy: 'Achieved 99.8% quality compliance for beverage manufacturer'
+      solutions: ['Recipe Management', 'CIP/SIP Systems', 'Traceability', 'Quality Control']
     },
     {
       icon: <PillBottle className="w-8 h-8" />,
-      title: 'Pharmaceutical',
-      description: 'Validated automation systems meeting FDA and cGMP requirements for pharmaceutical production.',
-      solutions: ['Batch Records', 'Clean Room Control', 'Validation Support', 'Audit Trails'],
-      caseStudy: 'Successful FDA validation for API production facility'
+      title: 'Life Sciences',
+      description: 'Validated automation systems meeting FDA and cGMP requirements for pharmaceutical and biotechnology production.',
+      solutions: ['Batch Records', 'Clean Room Control', 'Validation Support', 'Audit Trails']
     },
     {
       icon: <TreePine className="w-8 h-8" />,
       title: 'Pulp & Paper',
       description: 'Automation solutions for pulp mills, paper machines, and converting operations.',
-      solutions: ['Fiber Line Control', 'Paper Machine DCS', 'Quality Systems', 'Energy Optimization'],
-      caseStudy: 'Improved paper quality and reduced waste by 18%'
+      solutions: ['Fiber Line Control', 'Paper Machine DCS', 'Quality Systems', 'Energy Optimization']
     },
     {
       icon: <Pickaxe className="w-8 h-8" />,
-      title: 'Mining & Metals',
-      description: 'Robust automation solutions for mining operations and metal processing facilities.',
-      solutions: ['Concentrator Control', 'Smelter Automation', 'Material Handling', 'Safety Systems'],
-      caseStudy: 'Increased throughput by 25% for copper concentrator'
+      title: 'Mining',
+      description: 'Robust automation solutions for mining operations and mineral processing facilities.',
+      solutions: ['Concentrator Control', 'Smelter Automation', 'Material Handling', 'Safety Systems']
+    },
+    {
+      icon: <Factory className="w-8 h-8" />,
+      title: 'Aluminum',
+      description: 'Automation for alumina refining, smelting, and casting operations requiring precise process control and energy management.',
+      solutions: ['Smelter Control', 'Pot Line Automation', 'Casting Automation', 'Energy Optimization']
+    },
+    {
+      icon: <Building2 className="w-8 h-8" />,
+      title: 'Cement',
+      description: 'Process automation for cement manufacturing including kiln control, grinding optimization, and emissions monitoring.',
+      solutions: ['Kiln Control', 'Grinding Optimization', 'Quality Control', 'Emissions Monitoring']
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Data Center Automation',
+      description: 'Automation and power management solutions for data center operations ensuring uptime and energy efficiency.',
+      solutions: ['Power Management', 'Cooling Optimization', 'UPS Integration', 'Energy Monitoring']
+    },
+    {
+      icon: <Anchor className="w-8 h-8" />,
+      title: 'Marine',
+      description: 'Automation solutions for marine vessels and offshore platforms including propulsion control and power management.',
+      solutions: ['Propulsion Control', 'Power Management', 'Vessel Automation', 'Safety Systems']
+    },
+    {
+      icon: <Package className="w-8 h-8" />,
+      title: 'Ports & Terminals',
+      description: 'Automation for port operations including crane control, terminal management, and logistics optimization.',
+      solutions: ['Crane Automation', 'Terminal Management', 'Logistics Control', 'Safety Systems']
+    },
+    {
+      icon: <Flame className="w-8 h-8" />,
+      title: 'Refining',
+      description: 'Downstream petroleum refining automation for distillation, catalytic cracking, and blending operations.',
+      solutions: ['Distillation Control', 'Reactor Control', 'Blending Optimization', 'Safety Instrumented Systems']
+    },
+    {
+      icon: <Settings className="w-8 h-8" />,
+      title: 'Printing',
+      description: 'Process control solutions for printing operations including web tension control, color management, and drying systems.',
+      solutions: ['Web Control', 'Color Management', 'Drying Systems', 'Quality Monitoring']
+    },
+    {
+      icon: <Pickaxe className="w-8 h-8" />,
+      title: 'Metals Processing',
+      description: 'Automation for metals processing including steel, copper, and specialty metals production and finishing.',
+      solutions: ['Furnace Control', 'Rolling Mill Automation', 'Quality Systems', 'Energy Management']
     }
   ];
 
@@ -133,51 +173,7 @@ const SolutionsPage = () => {
               "Commissioning",
               "Training",
               "Technical Support"
-            ],
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "ABB Automation Solutions",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Oil & Gas Automation",
-                    "description": "Upstream production, refining, pipelines, and LNG facilities automation"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Chemical Process Control",
-                    "description": "Process control solutions for chemical manufacturing and specialty chemical production"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Power Generation Automation",
-                    "description": "Automation solutions for conventional and renewable power generation facilities"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Water Treatment Automation",
-                    "description": "Complete automation solutions for water treatment, distribution, and wastewater management"
-                  }
-                }
-              ]
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "52",
-              "bestRating": "5"
-            }
+            ]
           })
         }}
       />
@@ -196,8 +192,8 @@ const SolutionsPage = () => {
               <span className="abb-text-gradient block">Solutions by Industry</span>
             </h1>
             <p className="text-xl text-abb-gray-600 max-w-3xl mx-auto">
-              Leverage our deep industry expertise and proven ABB automation solutions
-              to optimize your operations, improve safety, and drive operational excellence.
+              ABB automation solutions designed to optimize your operations
+              and improve safety across a wide range of industries.
             </p>
           </div>
 
@@ -228,7 +224,7 @@ const SolutionsPage = () => {
             </h2>
             <p className="text-xl text-abb-gray-600 max-w-3xl mx-auto">
               Our solutions are tailored to meet the unique requirements and challenges
-              of your specific industry, backed by decades of experience.
+              of your specific industry.
             </p>
           </div>
 
@@ -254,11 +250,6 @@ const SolutionsPage = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
-
-                    <div className="pt-4 border-t border-abb-gray-200">
-                      <div className="text-xs text-abb-green font-medium">Success Story:</div>
-                      <div className="text-xs text-abb-gray-600 mt-1">{industry.caseStudy}</div>
                     </div>
                   </div>
                 </div>
@@ -358,20 +349,35 @@ const SolutionsPage = () => {
             </div>
 
             <div className="bg-abb-gray-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-semibold text-abb-gray-900 mb-6">Project Success Metrics</h3>
-              <div className="space-y-6">
-                <div className="text-center p-6 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-primary mb-2">98%</div>
-                  <div className="text-abb-gray-600">On-Time Delivery</div>
-                </div>
-                <div className="text-center p-6 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-abb-green mb-2">95%</div>
-                  <div className="text-abb-gray-600">Customer Satisfaction</div>
-                </div>
-                <div className="text-center p-6 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-abb-blue mb-2">500+</div>
-                  <div className="text-abb-gray-600">Projects Completed</div>
-                </div>
+              <h3 className="text-2xl font-semibold text-abb-gray-900 mb-6">Find ABB Products by Industry</h3>
+              <div className="space-y-4">
+                <a
+                  href="https://www.grossautomation.com/products?s=ABB&manufacturers=ABBTOW"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <span className="text-abb-gray-700 font-medium">Search All ABB Products</span>
+                  <ArrowRight className="w-5 h-5 text-primary" />
+                </a>
+                <a
+                  href="https://www.grossautomation.com/products?s=ABB+Freelance+DCS&manufacturers=ABBTOW"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <span className="text-abb-gray-700 font-medium">Freelance DCS Products</span>
+                  <ArrowRight className="w-5 h-5 text-primary" />
+                </a>
+                <a
+                  href="https://www.grossautomation.com/products?s=ABB+800xA&manufacturers=ABBTOW"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <span className="text-abb-gray-700 font-medium">System 800xA Products</span>
+                  <ArrowRight className="w-5 h-5 text-primary" />
+                </a>
               </div>
             </div>
           </div>
@@ -387,7 +393,7 @@ const SolutionsPage = () => {
             </h2>
             <p className="text-xl text-white/90">
               Contact our industry experts to discuss your specific automation
-              requirements and discover how we can help you achieve operational excellence.
+              requirements and discover how ABB automation can support your operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

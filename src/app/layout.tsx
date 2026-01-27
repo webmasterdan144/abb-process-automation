@@ -20,9 +20,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ABB Process Automation Solutions Wisconsin | Gross Automation | 35+ Years Experience",
-  description: "Leading ABB process automation solutions in Wisconsin & Midwest by Gross Automation. Expert Freelance DCS, System 800xA & Compact Control implementation. Brookfield, WI based with 35+ years experience serving manufacturing, chemical, oil & gas industries.",
-  keywords: "ABB process automation Wisconsin, Freelance DCS Wisconsin, System 800xA Wisconsin, ABB automation Brookfield WI, industrial automation Wisconsin, DCS integration Wisconsin, SCADA systems Wisconsin, process control Wisconsin, ABB system integrator Wisconsin, Gross Automation, control systems Wisconsin, PLC programming Wisconsin, manufacturing automation Wisconsin, chemical process automation, oil gas automation Wisconsin, power generation automation",
+  title: "ABB Process Automation Solutions Wisconsin | Gross Automation | 25+ Years Experience",
+  description: "Leading ABB process automation solutions in Wisconsin & Midwest by Gross Automation. Expert Freelance DCS, System 800xA, Compact Control, Symphony Plus, Measurement & Analytics, and digital solutions. Brookfield, WI based with 25+ years experience serving manufacturing, chemical, oil & gas industries.",
+  keywords: "ABB process automation Wisconsin, Freelance DCS Wisconsin, System 800xA Wisconsin, ABB automation Brookfield WI, industrial automation Wisconsin, DCS integration Wisconsin, SCADA systems Wisconsin, process control Wisconsin, ABB system integrator Wisconsin, Gross Automation, control systems Wisconsin, PLC programming Wisconsin, manufacturing automation Wisconsin, chemical process automation, oil gas automation Wisconsin, power generation automation, Symphony Plus, measurement analytics, flow meter, pressure transmitter, Genix, IIoT, digital twin, cybersecurity",
   authors: [{ name: SITE_CONFIG.name }],
   creator: SITE_CONFIG.name,
   publisher: SITE_CONFIG.name,
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     canonical: SITE_CONFIG.url,
   },
   openGraph: {
-    title: "ABB Process Automation Solutions Wisconsin | Gross Automation | 35+ Years Experience",
-    description: "Leading ABB process automation solutions in Wisconsin & Midwest by Gross Automation. Expert Freelance DCS, System 800xA & Compact Control implementation with 35+ years experience.",
+    title: "ABB Process Automation Solutions Wisconsin | Gross Automation | 25+ Years Experience",
+    description: "Leading ABB process automation solutions in Wisconsin & Midwest by Gross Automation. Expert Freelance DCS, System 800xA & Compact Control implementation with 25+ years experience.",
     url: SITE_CONFIG.url,
     siteName: "Gross Automation - ABB Process Automation Experts Wisconsin",
     images: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@GrossAutomation",
     title: "ABB Process Automation Solutions Wisconsin | Gross Automation",
-    description: "Leading ABB automation solutions in Wisconsin & Midwest. Freelance DCS, System 800xA, Compact Control. 35+ years experience.",
+    description: "Leading ABB automation solutions in Wisconsin & Midwest. Freelance DCS, System 800xA, Compact Control. 25+ years experience.",
     images: [`${SITE_CONFIG.url}/og-image.jpg`],
   },
   verification: {
@@ -121,10 +121,6 @@ export default function RootLayout({
                 "logo": "${SITE_CONFIG.url}/logo.svg",
                 "image": "${SITE_CONFIG.url}/og-image.jpg",
                 "foundingDate": "1998",
-                "founder": {
-                  "@type": "Person",
-                  "name": "Gross Automation Founders"
-                },
                 "numberOfEmployees": "10-50",
                 "contactPoint": [
                   {
@@ -155,9 +151,9 @@ export default function RootLayout({
                     "availableLanguage": "en",
                     "hoursAvailable": {
                       "@type": "OpeningHoursSpecification",
-                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                      "opens": "00:00",
-                      "closes": "23:59"
+                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                      "opens": "08:00",
+                      "closes": "17:00"
                     }
                   }
                 ],
@@ -203,7 +199,7 @@ export default function RootLayout({
                 "sameAs": [
                   "https://grossautomation.com"
                 ],
-                "description": "Expert ABB process automation solutions including Freelance DCS, System 800xA, and Compact Control systems. Serving Wisconsin, Illinois, and the greater Midwest with 35+ years of experience.",
+                "description": "Expert ABB process automation solutions including Freelance DCS, System 800xA, and Compact Control systems. Serving Wisconsin, Illinois, and the greater Midwest with 25+ years of experience.",
                 "knowsAbout": [
                   "ABB Freelance DCS",
                   "ABB System 800xA",
@@ -213,7 +209,12 @@ export default function RootLayout({
                   "SCADA Systems",
                   "DCS Implementation",
                   "System Integration",
-                  "Control System Engineering"
+                  "Control System Engineering",
+                  "ABB Ability Symphony Plus",
+                  "ABB Measurement & Analytics",
+                  "ABB Genix",
+                  "Digital Twin",
+                  "IEC 62443 Cybersecurity"
                 ],
                 "serviceArea": {
                   "@type": "GeoCircle",
@@ -225,9 +226,9 @@ export default function RootLayout({
                   "geoRadius": "500000"
                 },
                 "hasCredential": [
-                  "ABB Authorized System Integrator",
-                  "ISO 9001:2015 Quality Management",
-                  "OSHA 30-Hour Safety Certified"
+                  "ABB Authorized Distributor (as reported by Gross Automation)",
+                  "ISO 9001:2015 (as reported by Gross Automation)",
+                  "OSHA Safety Training (as reported by Gross Automation)"
                 ],
                 "memberOf": [
                   {
@@ -236,12 +237,6 @@ export default function RootLayout({
                     "alternateName": "CSIA"
                   }
                 ],
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.9",
-                  "reviewCount": "47",
-                  "bestRating": "5"
-                }
               }
             ])
           }}

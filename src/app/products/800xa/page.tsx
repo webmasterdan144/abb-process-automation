@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, Download, Monitor, Server, Shield, Layers, Network, Cpu } from 'lucide-react';
 
 export const metadata = {
-  title: 'ABB System 800xA Solutions by Gross Automation | 35+ Years Experience',
+  title: 'ABB System 800xA Solutions by Gross Automation | Authorized Distributor',
   description: 'Expert ABB System 800xA implementation by Gross Automation - 35+ years experience integrating process control, electrical systems, safety, and information management in comprehensive automation platforms.',
   keywords: 'ABB System 800xA, extended automation, DCS, electrical control, safety systems, information management, process automation, Gross Automation'
 };
@@ -88,7 +88,7 @@ const System800xAPage = () => {
             "@context": "https://schema.org",
             "@type": "Product",
             "name": "ABB System 800xA",
-            "description": "ABB System 800xA is the world&apos;s most comprehensive automation platform, integrating process control, electrical systems, safety, and telecommunications in one unified solution, expertly implemented by Gross Automation.",
+            "description": "ABB System 800xA is a comprehensive automation platform integrating process control, electrical systems, safety, and telecommunications, available through Gross Automation.",
             "brand": {
               "@type": "Brand",
               "name": "ABB"
@@ -98,34 +98,6 @@ const System800xAPage = () => {
               "name": "ABB"
             },
             "category": "Extended Automation Systems",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "seller": {
-                "@type": "Organization",
-                "name": "Gross Automation",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "3680 N. 126th St.",
-                  "addressLocality": "Brookfield",
-                  "addressRegion": "WI",
-                  "postalCode": "53005",
-                  "addressCountry": "US"
-                },
-                "telephone": "+1-262-252-1600"
-              },
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "Contact for Quote",
-                "priceCurrency": "USD"
-              }
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "18",
-              "bestRating": "5"
-            },
             "features": [
               "Integrated Platform",
               "Unified Workplace",
@@ -157,6 +129,49 @@ const System800xAPage = () => {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is ABB Ability System 800xA?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "ABB Ability System 800xA is a comprehensive extended automation platform that integrates process control, electrical control, safety instrumented systems, and information management into a single unified system. It uses AC 800M controllers and S800 I/O modules."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I order System 800xA products through Gross Automation?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Gross Automation is an authorized distributor of ABB Process Automation products. Contact Gross Automation at +1 (262) 252-1600 or search the online catalog at grossautomation.com for 800xA components including controllers, I/O modules, and software licenses."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What industries use ABB System 800xA?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "System 800xA is deployed in oil and gas, power generation, chemical and petrochemical, pulp and paper, metals and mining, and water and wastewater industries for plant-wide automation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does System 800xA support cybersecurity standards?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. ABB Ability System 800xA includes built-in cybersecurity features aligned with IEC 62443 standards, including role-based access control, audit logging, network segmentation support, and regular security patches."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-abb-gray-50 to-white py-20">
@@ -166,19 +181,19 @@ const System800xAPage = () => {
               <div className="space-y-4">
                 <div className="inline-block">
                   <span className="bg-abb-blue/10 text-abb-blue px-4 py-2 rounded-full text-sm font-medium">
-                    ABB System 800xA
+                    ABB Ability System 800xA
                   </span>
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  ABB System 800xA Solutions
+                  ABB Ability System 800xA
                   <span className="text-abb-blue block">by Gross Automation</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  ABB System 800xA is the world&apos;s most comprehensive automation platform,
+                  ABB System 800xA is a comprehensive automation platform,
                   integrating process control, electrical systems, safety, and telecommunications.
-                  Gross Automation delivers expert implementation with 35+ years of proven experience.
+                  Gross Automation delivers expert implementation with extensive experience.
                 </p>
               </div>
 
@@ -191,10 +206,13 @@ const System800xAPage = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
 
-                <button className="inline-flex items-center justify-center border-2 border-abb-gray-300 text-abb-gray-700 px-8 py-4 rounded-md hover:border-abb-blue hover:text-abb-blue transition-colors font-medium">
+                <a
+                  href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                  className="inline-flex items-center justify-center border-2 border-abb-gray-300 text-abb-gray-700 px-8 py-4 rounded-md hover:border-abb-blue hover:text-abb-blue transition-colors font-medium"
+                >
                   <Download className="mr-2 w-5 h-5" />
-                  Download Brochure
-                </button>
+                  Request Documentation
+                </a>
               </div>
             </div>
 
@@ -324,20 +342,35 @@ const System800xAPage = () => {
             </div>
 
             <div className="bg-abb-gray-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-semibold text-abb-gray-900 mb-6">ROI Highlights</h3>
-              <div className="space-y-6">
-                <div className="text-center p-6 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-abb-blue mb-2">30%</div>
-                  <div className="text-abb-gray-600">Reduction in Engineering Time</div>
-                </div>
-                <div className="text-center p-6 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-abb-green mb-2">25%</div>
-                  <div className="text-abb-gray-600">Lower Maintenance Costs</div>
-                </div>
-                <div className="text-center p-6 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-primary mb-2">50%</div>
-                  <div className="text-abb-gray-600">Faster Project Delivery</div>
-                </div>
+              <h3 className="text-2xl font-semibold text-abb-gray-900 mb-6">Find 800xA Products</h3>
+              <div className="space-y-4">
+                <a
+                  href="https://www.grossautomation.com/products?s=ABB+800xA&manufacturers=ABBTOW"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <span className="text-abb-gray-700 font-medium">Search 800xA Components</span>
+                  <ArrowRight className="w-5 h-5 text-abb-blue" />
+                </a>
+                <a
+                  href="https://www.grossautomation.com/products?s=ABB+controller+AC800M&manufacturers=ABBTOW"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <span className="text-abb-gray-700 font-medium">Search AC800M Controllers</span>
+                  <ArrowRight className="w-5 h-5 text-abb-blue" />
+                </a>
+                <a
+                  href="https://www.grossautomation.com/products?s=ABB+S800+IO&manufacturers=ABBTOW"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <span className="text-abb-gray-700 font-medium">Search S800 I/O Modules</span>
+                  <ArrowRight className="w-5 h-5 text-abb-blue" />
+                </a>
               </div>
             </div>
           </div>

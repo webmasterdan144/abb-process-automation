@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import ABBLogo from './ABBLogo';
 import GrossAutomationLogo from './GrossAutomationLogo';
-import TrustIndicators from './TrustIndicators';
 import { EXTERNAL_LINKS } from '@/lib/constants';
 
 const Header = () => {
@@ -52,24 +51,48 @@ const Header = () => {
 
               {isProductsOpen && (
                 <div
-                  className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-abb-gray-200 py-2"
+                  className="absolute top-full left-0 mt-1 w-72 bg-white rounded-md shadow-lg border border-abb-gray-200 py-2"
                   onMouseEnter={() => setIsProductsOpen(true)}
                   onMouseLeave={() => setIsProductsOpen(false)}
                 >
+                  <div className="px-4 py-1.5">
+                    <span className="text-xs font-semibold text-abb-gray-400 uppercase tracking-wider">Control Systems</span>
+                  </div>
                   <Link href="/products/freelance" className="block px-4 py-2 text-abb-gray-700 hover:bg-abb-gray-50 hover:text-primary">
                     ABB Freelance DCS
                   </Link>
                   <Link href="/products/800xa" className="block px-4 py-2 text-abb-gray-700 hover:bg-abb-gray-50 hover:text-primary">
-                    System 800xA
+                    ABB Ability System 800xA
+                  </Link>
+                  <Link href="/products/symphony-plus" className="block px-4 py-2 text-abb-gray-700 hover:bg-abb-gray-50 hover:text-primary">
+                    ABB Ability Symphony Plus
                   </Link>
                   <Link href="/products/compact-control" className="block px-4 py-2 text-abb-gray-700 hover:bg-abb-gray-50 hover:text-primary">
-                    Compact Control Builder
+                    Compact Product Suite
                   </Link>
+                  <div className="border-t border-abb-gray-100 my-1"></div>
+                  <div className="px-4 py-1.5">
+                    <span className="text-xs font-semibold text-abb-gray-400 uppercase tracking-wider">Hardware</span>
+                  </div>
                   <Link href="/products/controllers" className="block px-4 py-2 text-abb-gray-700 hover:bg-abb-gray-50 hover:text-primary">
-                    Controllers
+                    Controllers & PLCs
                   </Link>
                   <Link href="/products/io-systems" className="block px-4 py-2 text-abb-gray-700 hover:bg-abb-gray-50 hover:text-primary">
                     I/O Systems
+                  </Link>
+                  <div className="border-t border-abb-gray-100 my-1"></div>
+                  <div className="px-4 py-1.5">
+                    <span className="text-xs font-semibold text-abb-gray-400 uppercase tracking-wider">Instrumentation</span>
+                  </div>
+                  <Link href="/products/measurement-analytics" className="block px-4 py-2 text-abb-gray-700 hover:bg-abb-gray-50 hover:text-primary">
+                    Measurement & Analytics
+                  </Link>
+                  <div className="border-t border-abb-gray-100 my-1"></div>
+                  <div className="px-4 py-1.5">
+                    <span className="text-xs font-semibold text-abb-gray-400 uppercase tracking-wider">Digital</span>
+                  </div>
+                  <Link href="/products/digital-solutions" className="block px-4 py-2 text-abb-gray-700 hover:bg-abb-gray-50 hover:text-primary">
+                    Digital Solutions
                   </Link>
                 </div>
               )}
@@ -125,16 +148,25 @@ const Header = () => {
                     ABB Freelance DCS
                   </Link>
                   <Link href="/products/800xa" className="block text-abb-gray-600 hover:text-primary py-1">
-                    System 800xA
+                    ABB Ability System 800xA
+                  </Link>
+                  <Link href="/products/symphony-plus" className="block text-abb-gray-600 hover:text-primary py-1">
+                    ABB Ability Symphony Plus
                   </Link>
                   <Link href="/products/compact-control" className="block text-abb-gray-600 hover:text-primary py-1">
-                    Compact Control Builder
+                    Compact Product Suite
                   </Link>
                   <Link href="/products/controllers" className="block text-abb-gray-600 hover:text-primary py-1">
-                    Controllers
+                    Controllers & PLCs
                   </Link>
                   <Link href="/products/io-systems" className="block text-abb-gray-600 hover:text-primary py-1">
                     I/O Systems
+                  </Link>
+                  <Link href="/products/measurement-analytics" className="block text-abb-gray-600 hover:text-primary py-1">
+                    Measurement & Analytics
+                  </Link>
+                  <Link href="/products/digital-solutions" className="block text-abb-gray-600 hover:text-primary py-1">
+                    Digital Solutions
                   </Link>
                 </div>
               </div>

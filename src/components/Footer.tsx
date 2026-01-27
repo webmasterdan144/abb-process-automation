@@ -29,8 +29,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-abb-gray-300 text-sm leading-relaxed">
-              {SITE_CONFIG.tagline}. Expert solutions including Freelance DCS,
-              System 800xA, and Compact Control systems.
+              Authorized ABB Process Automation distributor. Expert solutions including Freelance DCS, System 800xA, Symphony Plus, and the full ABB instrumentation portfolio.
             </p>
           </div>
 
@@ -45,22 +44,37 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/products/800xa" className="text-abb-gray-300 hover:text-white transition-colors text-sm">
-                  System 800xA
+                  ABB Ability System 800xA
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/symphony-plus" className="text-abb-gray-300 hover:text-white transition-colors text-sm">
+                  ABB Ability Symphony Plus
                 </Link>
               </li>
               <li>
                 <Link href="/products/compact-control" className="text-abb-gray-300 hover:text-white transition-colors text-sm">
-                  Compact Control Builder
+                  Compact Product Suite
                 </Link>
               </li>
               <li>
                 <Link href="/products/controllers" className="text-abb-gray-300 hover:text-white transition-colors text-sm">
-                  Controllers
+                  Controllers & PLCs
                 </Link>
               </li>
               <li>
                 <Link href="/products/io-systems" className="text-abb-gray-300 hover:text-white transition-colors text-sm">
                   I/O Systems
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/measurement-analytics" className="text-abb-gray-300 hover:text-white transition-colors text-sm">
+                  Measurement & Analytics
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/digital-solutions" className="text-abb-gray-300 hover:text-white transition-colors text-sm">
+                  Digital Solutions
                 </Link>
               </li>
             </ul>

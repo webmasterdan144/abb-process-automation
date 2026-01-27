@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, Download, Cpu, Settings, Zap, Network, Wrench } from 'lucide-react';
 
 export const metadata = {
-  title: 'ABB Compact Control Builder Solutions by Gross Automation | 35+ Years Experience',
-  description: 'Expert ABB Compact Control Builder implementation by Gross Automation - 35+ years experience with AC 800M controllers, drive integration, and complete automation programming solutions.',
-  keywords: 'ABB Compact Control Builder, AC 800M, engineering tool, control solutions, drive integration, motor starters, automation programming, Gross Automation'
+  title: 'ABB Compact Product Suite | AC 800M, Safety Controllers, HMI | Gross Automation',
+  description: 'ABB Compact Product Suite for AC 800M controllers, safety controllers, process recorders, HMI, and field interfaces. Engineering and configuration tools for ABB process automation. Available through Gross Automation.',
+  keywords: 'ABB Compact Product Suite, AC 800M, Compact Control Builder, safety controllers, process recorders, HMI, field interfaces, ABB engineering tools, Gross Automation'
 };
 
 const CompactControlPage = () => {
@@ -125,8 +125,8 @@ const CompactControlPage = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "ABB Compact Control Builder",
-            "description": "ABB Compact Control Builder engineering tool for AC 800M controllers with integrated drive and motor starter functionality, professionally implemented by Gross Automation with 35+ years of expertise.",
+            "name": "ABB Compact Product Suite",
+            "description": "ABB Compact Product Suite for AC 800M controllers, safety controllers, process recorders, HMI, and field interface modules.",
             "brand": {
               "@type": "Brand",
               "name": "ABB"
@@ -135,7 +135,7 @@ const CompactControlPage = () => {
               "@type": "Organization",
               "name": "ABB"
             },
-            "category": "Engineering Software Tools",
+            "category": "Industrial Automation Platform",
             "offers": {
               "@type": "Offer",
               "availability": "https://schema.org/InStock",
@@ -196,6 +196,41 @@ const CompactControlPage = () => {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the ABB Compact Product Suite?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The ABB Compact Product Suite is a family of products centered around the AC 800M controller platform. It includes controllers, safety controllers, process recorders, HMI interfaces, and field interface modules. Compact Control Builder is the unified engineering tool for configuring and programming these devices."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I order Compact Product Suite components?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Gross Automation is an authorized distributor of ABB Process Automation products. Contact Gross Automation at +1 (262) 252-1600 or search the product catalog at grossautomation.com for specific Compact Product Suite components."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What programming languages does Compact Control Builder support?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compact Control Builder supports IEC 61131-3 programming languages including Function Block Diagram (FBD), Structured Text (ST), Ladder Diagram (LD), Instruction List (IL), and Sequential Function Chart (SFC)."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-abb-gray-50 to-white py-20">
@@ -205,19 +240,17 @@ const CompactControlPage = () => {
               <div className="space-y-4">
                 <div className="inline-block">
                   <span className="bg-abb-green/10 text-abb-green px-4 py-2 rounded-full text-sm font-medium">
-                    ABB Compact Control Builder
+                    ABB Compact Product Suite
                   </span>
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  Advanced Control
+                  ABB Compact Product Suite
                   <span className="text-abb-green block">Engineering Platform</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  ABB Compact Control Builder is a Windows-based engineering tool for creating
-                  comprehensive control solutions with AC 800M controllers, including seamless
-                  integration of ABB drives and motor starters.
+                  The ABB Compact Product Suite encompasses AC 800M controllers, safety controllers, process recorders, HMI interfaces, and field interface modules. Compact Control Builder provides the unified engineering environment for configuration and programming of these devices.
                 </p>
               </div>
 
@@ -477,6 +510,31 @@ const CompactControlPage = () => {
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Brochures & Search */}
+      <section className="py-12 bg-abb-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://www.grossautomation.com/products?s=ABB+Compact+Product+Suite&manufacturers=ABBTOW"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"
+            >
+              Find Compact Product Suite Parts
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+            <a
+              href="https://gross-automation-prod.s3.amazonaws.com/manufacturers/1726519165804file"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center border-2 border-abb-gray-300 text-abb-gray-700 px-8 py-4 rounded-md hover:border-primary hover:text-primary transition-colors font-medium"
+            >
+              Download Brochure (PDF)
+            </a>
           </div>
         </div>
       </section>

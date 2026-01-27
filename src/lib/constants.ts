@@ -5,11 +5,11 @@
 
 export const SITE_CONFIG = {
   name: process.env.NEXT_PUBLIC_COMPANY_NAME || 'Gross Automation',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://grossautomation.com',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.freelance800fsales.com',
   phone: process.env.NEXT_PUBLIC_PHONE || '800-676-8553',
   email: process.env.NEXT_PUBLIC_EMAIL || 'info@grossautomation.com',
-  description: 'Premier ABB Process Automation Solutions Provider in Wisconsin',
-  tagline: 'Your Wisconsin Partner for ABB Process Automation Excellence',
+  description: 'Authorized ABB Process Automation distributor serving Wisconsin and the Midwest',
+  tagline: 'Your Wisconsin Partner for ABB Process Automation',
 } as const;
 
 export const EXTERNAL_LINKS = {
@@ -18,13 +18,17 @@ export const EXTERNAL_LINKS = {
   abbSite: 'https://new.abb.com/control-systems',
 } as const;
 
+export const PARENT_SEARCH = {
+  baseUrl: 'https://www.grossautomation.com/products',
+  manufacturer: 'ABBTOW',
+} as const;
+
 export const ANALYTICS = {
   gtmId: process.env.NEXT_PUBLIC_GTM_ID || 'G-0F775G82W4',
 } as const;
 
 export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/company/gross-automation',
-  // Add more social links as needed
 } as const;
 
 export const CONTACT_INFO = {
@@ -40,7 +44,6 @@ export const CONTACT_INFO = {
   },
 } as const;
 
-// Navigation structure for consistent site navigation
 export const NAV_ITEMS = [
   { label: 'Products', href: '/products' },
   { label: 'Services', href: '/services' },
@@ -50,20 +53,27 @@ export const NAV_ITEMS = [
   { label: 'Contact', href: '/contact' },
 ] as const;
 
-// Product categories for filtering and organization
 export const PRODUCT_CATEGORIES = {
   CONTROLLERS: 'Controllers',
   DCS: 'Distributed Control Systems',
   IO_SYSTEMS: 'I/O Systems',
   ENGINEERING_TOOLS: 'Engineering Tools',
   SAFETY_SYSTEMS: 'Safety Systems',
+  INSTRUMENTATION: 'Measurement & Analytics',
+  DIGITAL: 'Digital Solutions',
 } as const;
 
-// Service categories
 export const SERVICE_CATEGORIES = {
   INSTALLATION: 'Installation & Commissioning',
   TRAINING: 'Training & Education',
   SUPPORT: 'Technical Support',
   UPGRADES: 'System Upgrades',
   CONSULTING: 'Consulting Services',
+  DIGITAL: 'Digital Transformation Services',
+} as const;
+
+export const BROCHURES = {
+  symphonyPlus: 'https://gross-automation-prod.s3.amazonaws.com/manufacturers/1731614295267file',
+  compactProductSuitePPT: 'https://gross-automation-prod.s3.amazonaws.com/manufacturers/1731607775046file',
+  compactProductSuiteBrochure: 'https://gross-automation-prod.s3.amazonaws.com/manufacturers/1726519165804file',
 } as const;

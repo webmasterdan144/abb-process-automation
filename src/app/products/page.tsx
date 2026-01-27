@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Layers, Cpu, Network, Settings } from 'lucide-react';
+import { ArrowRight, CheckCircle, Layers, Cpu, Network, Settings, Gauge, Cloud } from 'lucide-react';
 import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = {
@@ -27,6 +27,12 @@ const ProductsPage = () => {
           description: 'Extended automation platform for large enterprises',
           link: '/products/800xa',
           features: ['Plant-wide control', 'Information management', 'Advanced applications']
+        },
+        {
+          name: 'ABB Ability Symphony Plus',
+          description: 'Total plant automation for power and water industries',
+          link: '/products/symphony-plus',
+          features: ['Power generation', 'Water treatment', 'Legacy migration']
         }
       ]
     },
@@ -36,8 +42,8 @@ const ProductsPage = () => {
       icon: <Settings className="w-8 h-8" />,
       products: [
         {
-          name: 'Compact Control Builder',
-          description: 'Unified engineering environment for ABB controllers',
+          name: 'Compact Product Suite',
+          description: 'AC 800M controllers, safety controllers, process recorders, and field interfaces',
           link: '/products/compact-control',
           features: ['Integrated development', 'Multi-language support', 'Advanced diagnostics']
         }
@@ -66,6 +72,32 @@ const ProductsPage = () => {
           description: 'S800, S900 and distributed I/O modules',
           link: '/products/io-systems',
           features: ['Flexible configuration', 'Hot-swappable', 'Advanced diagnostics']
+        }
+      ]
+    },
+    {
+      title: 'Instrumentation',
+      description: 'Measurement and analytical instruments',
+      icon: <Gauge className="w-8 h-8" />,
+      products: [
+        {
+          name: 'Measurement & Analytics',
+          description: 'Flow, pressure, temperature, level, and analytical instruments',
+          link: '/products/measurement-analytics',
+          features: ['Flow meters', 'Pressure transmitters', 'Analyzers']
+        }
+      ]
+    },
+    {
+      title: 'Digital Solutions',
+      description: 'IIoT, analytics, and cybersecurity',
+      icon: <Cloud className="w-8 h-8" />,
+      products: [
+        {
+          name: 'Digital Solutions',
+          description: 'Genix IIoT, digital twin, asset management, and cybersecurity',
+          link: '/products/digital-solutions',
+          features: ['Genix IoT', 'Digital Twin', 'Cybersecurity']
         }
       ]
     }
@@ -335,11 +367,11 @@ const ProductsPage = () => {
               <div className="space-y-6">
                 <div className="border-l-4 border-primary pl-4">
                   <h4 className="font-semibold text-abb-gray-800">Freelance DCS</h4>
-                  <p className="text-abb-gray-600 text-sm">World&apos;s most flexible distributed control system</p>
+                  <p className="text-abb-gray-600 text-sm">Flexible distributed control system</p>
                 </div>
 
                 <div className="border-l-4 border-abb-blue pl-4">
-                  <h4 className="font-semibold text-abb-gray-800">System 800xA</h4>
+                  <h4 className="font-semibold text-abb-gray-800">ABB Ability System 800xA</h4>
                   <p className="text-abb-gray-600 text-sm">Extended automation platform for enterprise-wide control</p>
                 </div>
 

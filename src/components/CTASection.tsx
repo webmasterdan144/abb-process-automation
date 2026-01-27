@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { ArrowRight, Phone, Mail, MessageSquare } from 'lucide-react';
 import TrustIndicators from './TrustIndicators';
 import { SITE_CONFIG, EXTERNAL_LINKS, CONTACT_INFO } from '@/lib/constants';
@@ -18,7 +17,7 @@ const CTASection = () => {
               </h2>
               <p className="text-xl text-white/90 leading-relaxed">
                 Get expert consultation on ABB automation solutions tailored to your specific needs.
-                Gross Automation&apos;s team is ready to help you achieve operational excellence with 35+ years of proven expertise.
+                Gross Automation&apos;s team is ready to help you achieve operational excellence with decades of proven expertise.
               </p>
             </div>
 
@@ -76,6 +75,15 @@ const CTASection = () => {
                 className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-md hover:border-white hover:bg-white/10 transition-colors font-medium"
               >
                 Schedule Consultation
+              </a>
+
+              <a
+                href="https://www.grossautomation.com/products?s=ABB&manufacturers=ABBTOW"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-md hover:border-white hover:bg-white/10 transition-colors font-medium"
+              >
+                Search Products
               </a>
             </div>
 

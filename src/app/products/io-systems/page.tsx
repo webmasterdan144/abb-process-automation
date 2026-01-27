@@ -146,6 +146,34 @@ const IOSystemsPage = () => {
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What ABB I/O systems are available?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "ABB offers S800 distributed I/O for process and hybrid applications and S900 remote I/O for harsh industrial environments. Both systems support hot-swappable modules, advanced diagnostics, and multiple communication protocols. Available through Gross Automation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are ABB S800 I/O modules hot-swappable?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. ABB S800 I/O modules are designed for hot-swap capability, allowing module replacement without shutting down the system. This supports continuous plant operation during maintenance activities."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-abb-gray-50 to-white py-20">
         <div className="container mx-auto px-4">
@@ -403,10 +431,27 @@ const IOSystemsPage = () => {
               </div>
 
               <div className="mt-8 p-4 bg-abb-gray-50 rounded-lg text-center">
-                <div className="text-2xl font-bold text-abb-gray-900">99.9%</div>
+                <div className="text-2xl font-bold text-abb-gray-900">High</div>
                 <div className="text-abb-gray-600">System Availability</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Find Products */}
+      <section className="py-12 bg-abb-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://www.grossautomation.com/products?s=ABB+S800+IO&manufacturers=ABBTOW"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"
+            >
+              Find ABB I/O Systems
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Play, CheckCircle } from 'lucide-react';
+import { ArrowRight, Search, CheckCircle } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -21,13 +21,12 @@ const HeroSection = () => {
               </div>
 
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-abb-gray-900 leading-tight">
-                Advanced Process Control
+                Complete ABB Process Automation Portfolio
                 <span className="abb-text-gradient block">Solutions by Gross Automation</span>
               </h1>
 
               <p className="text-xl text-abb-gray-600 leading-relaxed">
-                Comprehensive ABB automation solutions including Freelance DCS, System 800xA,
-                and Compact Control systems delivered by Gross Automation&apos;s expert team with 35+ years of proven experience.
+                Gross Automation is an authorized distributor of ABB Process Automation products. The portfolio includes three DCS platforms, full instrumentation, controllers, I/O systems, and digital solutions for industrial operations.
               </p>
             </div>
 
@@ -43,7 +42,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-abb-green" />
-                <span className="text-abb-gray-700">Professional support and maintenance programs (Monday - Friday, 8:00 AM - 5:00 PM CST)</span>
+                <span className="text-abb-gray-700">Support and maintenance services (Monday - Friday, 8:00 AM - 5:00 PM CST)</span>
               </div>
             </div>
 
@@ -58,11 +57,11 @@ const HeroSection = () => {
               </Link>
 
               <a
-                href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
+                href="https://www.grossautomation.com/products?s=ABB&manufacturers=ABBTOW"
                 className="inline-flex items-center justify-center border-2 border-abb-gray-300 text-abb-gray-700 px-8 py-4 rounded-md hover:border-primary hover:text-primary transition-colors font-medium"
               >
-                <Play className="mr-2 w-5 h-5" />
-                Schedule Consultation
+                <Search className="mr-2 w-5 h-5" />
+                Search Products
               </a>
             </div>
 
@@ -72,7 +71,7 @@ const HeroSection = () => {
               <div className="flex items-center space-x-8 opacity-60">
                 <div className="text-2xl font-bold text-abb-gray-400">ABB</div>
                 <div className="text-lg font-semibold text-abb-gray-400">Gross Automation</div>
-                <div className="text-sm text-abb-gray-400">35+ Years Experience</div>
+                <div className="text-sm text-abb-gray-400">25+ Years Experience</div>
               </div>
             </div>
           </div>
@@ -102,17 +101,22 @@ const HeroSection = () => {
                     <div className="text-abb-green font-semibold">Level 1: Field Devices</div>
                     <div className="text-sm text-abb-gray-600 mt-1">S800 I/O & Field Instruments</div>
                   </div>
+
+                  <div className="bg-abb-gray-200 rounded-lg p-4 text-center">
+                    <div className="text-abb-gray-700 font-semibold">Digital Layer</div>
+                    <div className="text-sm text-abb-gray-600 mt-1">Genix IIoT & Analytics</div>
+                  </div>
                 </div>
 
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-4 pt-4 border-t border-abb-gray-200">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">99.9%</div>
-                    <div className="text-sm text-abb-gray-600">Uptime</div>
+                    <div className="text-2xl font-bold text-primary">3</div>
+                    <div className="text-sm text-abb-gray-600">DCS Platforms</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">500+</div>
-                    <div className="text-sm text-abb-gray-600">Projects</div>
+                    <div className="text-2xl font-bold text-primary">Full</div>
+                    <div className="text-sm text-abb-gray-600">Instrumentation Line</div>
                   </div>
                 </div>
               </div>

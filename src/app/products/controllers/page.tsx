@@ -132,6 +132,34 @@ const ControllersPage = () => {
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What ABB controllers are available through Gross Automation?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Gross Automation distributes ABB controllers including AC800M high-performance process controllers, AC500 scalable PLCs, and PM864 dedicated process controllers. Contact Gross Automation at +1 (262) 252-1600 for specific controller selection."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between AC800M and AC500 controllers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The AC800M is a high-performance controller designed for process automation within ABB System 800xA and Compact Product Suite environments. The AC500 is a scalable PLC family designed for manufacturing automation, building automation, and machine control applications."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-abb-gray-50 to-white py-20">
         <div className="container mx-auto px-4">
@@ -282,7 +310,7 @@ const ControllersPage = () => {
                     <Clock className="w-6 h-6 text-abb-green mt-1 flex-shrink-0" />
                     <div>
                       <div className="font-semibold text-abb-gray-800">Proven Reliability</div>
-                      <div className="text-abb-gray-600 text-sm">Over 99.9% uptime in industrial applications</div>
+                      <div className="text-abb-gray-600 text-sm">Designed for high availability in industrial applications</div>
                     </div>
                   </div>
 
@@ -304,11 +332,28 @@ const ControllersPage = () => {
                 </div>
 
                 <div className="mt-8 p-4 bg-abb-blue/10 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-abb-blue">35+</div>
+                  <div className="text-2xl font-bold text-abb-blue">25+</div>
                   <div className="text-abb-gray-600">Years Controller Experience</div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Find Products */}
+      <section className="py-12 bg-abb-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://www.grossautomation.com/products?s=ABB+controller+AC800M&manufacturers=ABBTOW"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"
+            >
+              Find ABB Controllers
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>

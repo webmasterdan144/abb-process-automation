@@ -5,15 +5,15 @@ import GrossAutomationLogo from '@/components/GrossAutomationLogo';
 
 export const metadata = {
   title: 'About Gross Automation - ABB Process Automation Experts',
-  description: 'Learn about Gross Automation, your trusted partner for ABB process automation solutions. 35+ years of experience in system integration and engineering.',
+  description: 'Learn about Gross Automation, your trusted partner for ABB process automation solutions. 25+ years of experience in system integration and engineering.',
   keywords: 'Gross Automation, ABB partner, process automation experts, system integration, industrial automation'
 };
 
 const AboutPage = () => {
   const stats = [
-    { number: '35+', label: 'Years Experience' },
+    { number: '25+', label: 'Years Experience' },
     { number: '500+', label: 'Projects Completed' },
-    { number: '99.9%', label: 'System Uptime' },
+    { number: 'High', label: 'System Availability' },
     { number: 'M-F', label: 'Business Hours Support' }
   ];
 
@@ -36,7 +36,7 @@ const AboutPage = () => {
     {
       icon: <Clock className="w-6 h-6" />,
       title: 'Proven Results',
-      description: 'Over 35 years of successful project delivery across multiple industries with a track record of on-time, on-budget completion.'
+      description: 'Over 25 years of successful project delivery across multiple industries with a track record of on-time, on-budget completion.'
     }
   ];
 
@@ -48,13 +48,14 @@ const AboutPage = () => {
     'Field Installation & Commissioning',
     'Training & Documentation',
     'Ongoing Support & Maintenance',
-    'System Upgrades & Migrations'
+    'System Upgrades & Migrations',
+    'Digital Transformation Services'
   ];
 
   const certifications = [
-    'ABB Authorized System Integrator',
-    'ISO 9001:2015 Quality Management',
-    'OSHA 30-Hour Safety Certified'
+    'ABB Authorized Distributor',
+    'ISO 9001:2015 (as reported by Gross Automation)',
+    'OSHA Safety Training (as reported by Gross Automation)'
   ];
 
   return (
@@ -77,7 +78,7 @@ const AboutPage = () => {
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  For over 35 years, Gross Automation has been providing comprehensive
+                  For over 25 years, Gross Automation has been providing comprehensive
                   ABB process automation solutions, specializing in engineering, system
                   integration, and lifecycle support services.
                 </p>
@@ -117,7 +118,7 @@ const AboutPage = () => {
                 <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0 lg:space-x-6">
                   <div className="text-center lg:text-left">
                     <div className="text-sm font-medium text-abb-gray-700 mb-2">Trusted Partnership</div>
-                    <div className="text-xs text-abb-gray-500">Celebrating 35+ Years of Excellence</div>
+                    <div className="text-xs text-abb-gray-500">Celebrating 25+ Years of Service</div>
                   </div>
                   <div className="flex-shrink-0">
                     <GrossAutomationLogo width={140} height={45} />
@@ -166,7 +167,7 @@ const AboutPage = () => {
                   Our Story
                 </h2>
                 <p className="text-lg text-abb-gray-600 leading-relaxed">
-                  Founded in 1990, Gross Automation began with a simple mission: to provide
+                  Established in 1998, Gross Automation began with a simple mission: to provide
                   industrial customers with reliable, comprehensive automation solutions that
                   drive operational excellence.
                 </p>
@@ -261,7 +262,7 @@ const AboutPage = () => {
                     </div>
                   </div>
                   <div className="flex-shrink-0 text-center lg:text-right">
-                    <div className="text-xs text-abb-gray-500 mb-3">Established 1990</div>
+                    <div className="text-xs text-abb-gray-500 mb-3">Established 1998</div>
                     <GrossAutomationLogo width={120} height={40} />
                   </div>
                 </div>

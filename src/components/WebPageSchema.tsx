@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
+import { SITE_CONFIG } from '@/lib/constants';
 
 interface WebPageSchemaProps {
   title?: string;
@@ -17,7 +18,7 @@ const WebPageSchema: React.FC<WebPageSchemaProps> = ({
   breadcrumbList
 }) => {
   const pathname = usePathname();
-  const baseUrl = 'https://www.freelance800fsales.com';
+  const baseUrl = SITE_CONFIG.url;
   const currentUrl = `${baseUrl}${pathname}`;
 
   // Generate default breadcrumbs if not provided
@@ -75,8 +76,8 @@ const WebPageSchema: React.FC<WebPageSchemaProps> = ({
         "addressCountry": "US"
       },
       "telephone": "+1-262-252-1600",
-      "url": "https://www.freelance800fsales.com",
-      "logo": "https://www.freelance800fsales.com/logo.svg"
+      "url": baseUrl,
+      "logo": `${baseUrl}/logo.svg`
     },
     "provider": {
       "@type": "Organization",

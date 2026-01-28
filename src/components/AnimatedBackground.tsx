@@ -4,7 +4,7 @@ import React from 'react';
 
 const AnimatedBackground: React.FC = () => {
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Pulsing background */}
       <div className="absolute inset-0 bg-red-500 opacity-20 animate-pulse"></div>
 

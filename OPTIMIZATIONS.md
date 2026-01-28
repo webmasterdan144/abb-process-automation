@@ -50,7 +50,7 @@ NEXT_PUBLIC_PHONE=800-676-8553
 NEXT_PUBLIC_EMAIL=info@grossautomation.com
 NEXT_PUBLIC_GTM_ID=G-0F775G82W4
 NEXT_PUBLIC_MAIN_SITE_URL=https://www.grossautomation.com
-NEXT_PUBLIC_FREELANCE_SITE_URL=https://www.freelance800fsales.com
+NEXT_PUBLIC_ABB_SITE_URL=https://www.abbautomationsales.com
 ```
 
 **Impact:**

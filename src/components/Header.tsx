@@ -44,6 +44,8 @@ const Header = () => {
                 className="flex items-center space-x-1 text-abb-gray-700 hover:text-primary transition-colors"
                 onMouseEnter={() => setIsProductsOpen(true)}
                 onMouseLeave={() => setIsProductsOpen(false)}
+                aria-expanded={isProductsOpen}
+                aria-haspopup="true"
               >
                 <span>Products</span>
                 <ChevronDown className="w-4 h-4" />
@@ -127,8 +129,10 @@ const Header = () => {
             <button
               onClick={toggleMenu}
               className="text-abb-gray-700 hover:text-primary"
+              aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={isMenuOpen}
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>

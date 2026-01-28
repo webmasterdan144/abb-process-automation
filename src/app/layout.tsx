@@ -117,9 +117,9 @@ export default function RootLayout({
                 "@type": ["Organization", "LocalBusiness"],
                 "name": "Gross Automation",
                 "alternateName": ["ABB Process Automation Solutions", "Gross Automation Inc"],
-                "url": "${SITE_CONFIG.url}",
-                "logo": "${SITE_CONFIG.url}/logo.svg",
-                "image": "${SITE_CONFIG.url}/og-image.jpg",
+                "url": SITE_CONFIG.url,
+                "logo": `${SITE_CONFIG.url}/logo.svg`,
+                "image": `${SITE_CONFIG.url}/og-image.jpg`,
                 "foundingDate": "1998",
                 "numberOfEmployees": "10-50",
                 "contactPoint": [

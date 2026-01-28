@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { SITE_CONFIG } from '@/lib/constants';
 import { ChevronRight, Home } from 'lucide-react';
 import TrustIndicators from './TrustIndicators';
 
@@ -55,7 +56,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ customItems }) => {
       '@type': 'ListItem',
       'position': index + 1,
       'name': item.label,
-      'item': `https://www.freelance800fsales.com${item.href}`
+      'item': `${SITE_CONFIG.url}${item.href}`
     }))
   };
 

@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'ABB Process Automation Wisconsin | Gross Automation Brookfield WI',
     description: 'Leading ABB automation solutions in Wisconsin. Local expertise in Brookfield serving Milwaukee, Madison, Green Bay. 25+ years experience.',
-    url: 'https://www.freelance800fsales.com/wisconsin-abb-automation',
+    url: 'https://www.abbautomationsales.com/wisconsin-abb-automation',
   },
   other: {
     'geo.region': 'US-WI',
@@ -83,7 +83,7 @@ const WisconsinABBAutomationPage = () => {
               'longitude': '-88.1834'
             },
             'telephone': '+1-262-252-1600',
-            'url': 'https://www.freelance800fsales.com/wisconsin-abb-automation',
+            'url': 'https://www.abbautomationsales.com/wisconsin-abb-automation',
             'areaServed': [
               'Wisconsin', 'Milwaukee', 'Madison', 'Green Bay', 'Appleton', 'Kenosha', 'Racine', 'Oshkosh', 'Eau Claire', 'Wausau'
             ],

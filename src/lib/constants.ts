@@ -5,7 +5,7 @@
 
 export const SITE_CONFIG = {
   name: process.env.NEXT_PUBLIC_COMPANY_NAME || 'Gross Automation',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.freelance800fsales.com',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.abbautomationsales.com',
   phone: process.env.NEXT_PUBLIC_PHONE || '800-676-8553',
   email: process.env.NEXT_PUBLIC_EMAIL || 'info@grossautomation.com',
   description: 'Authorized ABB Process Automation distributor serving Wisconsin and the Midwest',
@@ -14,7 +14,7 @@ export const SITE_CONFIG = {
 
 export const EXTERNAL_LINKS = {
   mainSite: process.env.NEXT_PUBLIC_MAIN_SITE_URL || 'https://www.grossautomation.com',
-  freelanceSite: process.env.NEXT_PUBLIC_FREELANCE_SITE_URL || 'https://www.freelance800fsales.com',
+  abbAutomationSite: process.env.NEXT_PUBLIC_ABB_SITE_URL || 'https://www.abbautomationsales.com',
   abbSite: 'https://new.abb.com/control-systems',
 } as const;
 

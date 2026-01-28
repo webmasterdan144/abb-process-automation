@@ -4,13 +4,13 @@ This directory contains PDF documentation files for the ABB Process Automation w
 
 ## Current Files
 
-**Note:** The following files are currently not referenced in the codebase and may be candidates for removal or proper naming:
+**Note:** These files are not directly referenced in the codebase (brochure downloads point to S3). They are kept as local backups.
 
-- `1726519165804file (1).pdf` (5.8MB) - Unused
-- `1726519278617file.pdf` (5.2MB) - Unused
-- `1731607775046file.pdf` (2.8MB) - Unused
-- `1731611305723file (1).pdf` (1.4MB) - Unused
-- `dfa67ca8-1952-4142-b462-ee9c380c3e8e.pdf` (8.0MB) - Unused
+- `abb-compact-product-suite-brochure.pdf` (5.7MB) - Compact Product Suite brochure
+- `abb-product-catalog.pdf` (5.1MB) - ABB product catalog
+- `abb-compact-product-suite-presentation.pdf` (2.8MB) - Compact Product Suite presentation
+- `abb-symphony-plus-overview.pdf` (1.3MB) - Symphony Plus overview
+- `abb-process-automation-general.pdf` (8.0MB) - General process automation documentation
 
 **Total size:** ~23MB
 

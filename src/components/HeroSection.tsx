@@ -123,10 +123,10 @@ const HeroSection = () => {
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center">
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center" aria-hidden="true">
               <div className="w-10 h-10 bg-primary rounded-full"></div>
             </div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-abb-blue/10 rounded-full flex items-center justify-center">
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-abb-blue/10 rounded-full flex items-center justify-center" aria-hidden="true">
               <div className="w-8 h-8 bg-abb-blue rounded-full"></div>
             </div>
           </div>

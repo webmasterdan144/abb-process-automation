@@ -154,7 +154,7 @@ const SolutionsPage = () => {
                 "addressCountry": "US"
               },
               "telephone": "+1-262-252-1600",
-              "url": "https://www.freelance800fsales.com"
+              "url": "https://www.abbautomationsales.com"
             },
             "areaServed": [
               "Wisconsin",

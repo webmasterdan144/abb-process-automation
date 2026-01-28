@@ -263,10 +263,10 @@ export default function RootLayout({
 
         <Script
           src="/ga-microsite.js"
-          data-site-id="ga_a11ff630610fb3bff3299304cdabd6d4"
-          data-auth-key="b34a01880f9d23894ce0d63db6649b33474d125743aacf68d20c93cb2fe1f7abd21c745638247561955d97a90e1eff5070159202f1142163ddd0b08a774592f1"
+          data-site-id="ga_db84fc8a8d0483420059420b54f7255ef571b0e2978ac6d983a30337dae8"
+          data-auth-key="6bd72d0f7013d056a3a53977576b10cb6026bb4eb96dcd7190d514362cbcd96bafa0b15ed5f9ba57ddc1375681a0fdf1199da96b73ad15e1a9e38d85b4b5f74b"
           data-admin-url="https://admin.grossautomation.com"
-          data-manufacturer-code="ABB"
+          data-manufacturer-code="ABBTOW"
           strategy="afterInteractive"
         />
       </body>

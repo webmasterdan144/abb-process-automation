@@ -1,8 +1,8 @@
 /**
- * Gross Automation Microsite SDK v1.3.3
+ * Gross Automation Microsite SDK v1.5.5-js
  *
  * Universal JavaScript SDK for tracking, announcements, referral tracking,
- * and auto-update notifications.
+ * GA4 analytics injection, and auto-update notifications.
  * Works on any website: static HTML, PHP, Next.js, WordPress, etc.
  *
  * Usage:
@@ -49,6 +49,7 @@
     enableTracking: true,
     enableAnnouncements: true,
     enableReferralTracking: true,
+    enableGA4: true,         // Enable GA4 gtag.js injection (fetches measurement ID from admin)
     respectDNT: true,
     trackAdminUsers: false,
     referralDomains: ['www.grossautomation.com', 'grossautomation.com'],
@@ -79,6 +80,8 @@
         config.enableAnnouncements = script.dataset.enableAnnouncements !== 'false';
       if (script.dataset.enableReferralTracking !== undefined)
         config.enableReferralTracking = script.dataset.enableReferralTracking !== 'false';
+      if (script.dataset.enableGa4 !== undefined)
+        config.enableGA4 = script.dataset.enableGa4 !== 'false';
       if (script.dataset.respectDnt !== undefined)
         config.respectDNT = script.dataset.respectDnt !== 'false';
       if (script.dataset.debug !== undefined)
@@ -266,7 +269,18 @@
         signature: signature
       };
 
-      const baseEndpoint = CONFIG.adminUrl + '/api/microsites/track';
+      // Use local proxy endpoint to avoid CORS issues
+      // Try Next.js API route first, then PHP proxy
+      const useLocalProxy = typeof window !== 'undefined';
+      let baseEndpoint;
+
+      if (useLocalProxy) {
+        // Try Next.js API route first (will 404 on non-Next.js sites, then fallback to PHP)
+        baseEndpoint = window.location.origin + '/api/tracking-proxy';
+      } else {
+        // Server-side or fallback
+        baseEndpoint = CONFIG.adminUrl + '/api/microsites/track';
+      }
 
       // Send using sendBeacon (preferred) or fetch fallback
       if (navigator.sendBeacon) {
@@ -275,6 +289,14 @@
           '&_sig=' + encodeURIComponent(signature);
         const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
         const sent = navigator.sendBeacon(beaconUrl, blob);
+
+        if (!sent && useLocalProxy) {
+          // Fallback to PHP proxy if Next.js route fails
+          const phpProxyUrl = window.location.origin + '/tracking-proxy.php?_sk=' +
+            encodeURIComponent(CONFIG.siteId) + '&_sig=' + encodeURIComponent(signature);
+          navigator.sendBeacon(phpProxyUrl, blob);
+        }
+
         log('Pageview tracked via sendBeacon:', sent, payload);
       } else {
         // Fallback for older browsers
@@ -289,6 +311,19 @@
           keepalive: true
         }).then(() => {
           log('Pageview tracked via fetch:', payload);
+        }).catch(err => {
+          // Try PHP proxy fallback
+          if (useLocalProxy) {
+            const phpProxyUrl = window.location.origin + '/tracking-proxy.php?_sk=' +
+              encodeURIComponent(CONFIG.siteId) + '&_sig=' + encodeURIComponent(signature);
+            return fetch(phpProxyUrl, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload),
+              keepalive: true
+            });
+          }
+          throw err;
         }).catch(err => {
           warn('Pageview tracking failed:', err);
         });
@@ -315,7 +350,30 @@
     },
 
     fetchAndShow: async function() {
-      const endpoint = CONFIG.adminUrl + '/api/announcements/global';
+      // Use local proxy endpoint to fetch via internal VPC instead of external admin URL
+      // This solves: mixed content errors, 520 errors, and is faster (internal network)
+      const useLocalProxy = CONFIG.manufacturerCode && typeof window !== 'undefined';
+
+      let endpoint;
+      let proxyEndpoints = [];
+
+      if (useLocalProxy) {
+        // Try multiple proxy endpoints (Next.js API route, then PHP)
+        const params = new URLSearchParams({
+          manufacturerCode: CONFIG.manufacturerCode,
+          siteId: CONFIG.siteId
+        });
+        const queryString = params.toString();
+
+        proxyEndpoints = [
+          window.location.origin + '/api/announcement-proxy?' + queryString, // Next.js
+          window.location.origin + '/announcement-proxy.php?' + queryString  // PHP
+        ];
+        endpoint = proxyEndpoints[0];
+      } else {
+        // Fallback to direct admin server call (legacy behavior)
+        endpoint = CONFIG.adminUrl + '/api/announcements/global';
+      }
 
       try {
         const headers = {};
@@ -324,17 +382,36 @@
           headers['If-None-Match'] = cachedEtag;
         }
 
-        const response = await fetch(endpoint, {
+        let response = await fetch(endpoint, {
           headers,
           cache: 'no-store'
         });
+
+        // If first proxy fails and we have alternatives, try them
+        if (!response.ok && proxyEndpoints.length > 1) {
+          for (let i = 1; i < proxyEndpoints.length; i++) {
+            try {
+              response = await fetch(proxyEndpoints[i], {
+                headers,
+                cache: 'no-store'
+              });
+              if (response.ok) {
+                log('Announcement proxy fallback succeeded: ' + proxyEndpoints[i]);
+                break;
+              }
+            } catch (fallbackErr) {
+              // Continue to next fallback
+            }
+          }
+        }
 
         if (response.status === 304) {
           // Use cached announcement
           const cached = storage.get('ga_announcement_cached');
           if (cached) {
             this.cachedAnnouncement = JSON.parse(cached);
-            this.render(this.cachedAnnouncement);
+            const announcements = Array.isArray(this.cachedAnnouncement) ? this.cachedAnnouncement : [this.cachedAnnouncement];
+            this.renderMultiple(announcements);
           }
           return;
         }
@@ -354,14 +431,19 @@
         storage.set('ga_announcement_cached', JSON.stringify(data));
 
         this.cachedAnnouncement = data;
-        this.render(data);
+
+        // Handle both single announcement (object) and multiple announcements (array)
+        const announcements = Array.isArray(data) ? data : [data];
+        this.renderMultiple(announcements);
       } catch (err) {
         warn('Failed to fetch announcements:', err);
 
         // Try to use cached version
         const cached = storage.get('ga_announcement_cached');
         if (cached) {
-          this.render(JSON.parse(cached));
+          const data = JSON.parse(cached);
+          const announcements = Array.isArray(data) ? data : [data];
+          this.renderMultiple(announcements);
         }
       }
     },
@@ -374,17 +456,131 @@
 
     dismiss: function(announcementId) {
       const key = 'ga_dismissed_' + announcementId;
-      storage.set(key, Date.now().toString(), 365);
+      // Dismissal expires after 4 hours (4/24 = 0.167 days)
+      storage.set(key, Date.now().toString(), 0.167);
 
-      const popup = document.getElementById('ga-announcement-popup');
-      if (popup) {
-        popup.style.display = 'none';
+      // Remove this specific announcement from the DOM
+      const announcementElement = document.getElementById('ga-announcement-' + announcementId);
+      if (announcementElement) {
+        announcementElement.remove();
       }
+
+      // If no announcements left, remove the container
+      const container = document.getElementById('ga-announcement-container');
+      if (container && container.children.length === 0) {
+        container.remove();
+      }
+
       log('Announcement dismissed:', announcementId);
     },
 
+    renderMultiple: function(announcements) {
+      if (!announcements || announcements.length === 0) {
+        return;
+      }
+
+      // Remove existing container if any
+      const existingContainer = document.getElementById('ga-announcement-container');
+      if (existingContainer) {
+        existingContainer.remove();
+      }
+
+      // Filter announcements: check date range and dismissal status
+      const now = new Date();
+      const validAnnouncements = announcements.filter(announcement => {
+        // Check date range
+        if (announcement.start_date && new Date(announcement.start_date) > now) {
+          return false;
+        }
+        if (announcement.end_date && new Date(announcement.end_date) < now) {
+          return false;
+        }
+        // Check if dismissed
+        if (this.isDismissed(announcement.id)) {
+          log('Announcement already dismissed:', announcement.id);
+          return false;
+        }
+        return true;
+      });
+
+      if (validAnnouncements.length === 0) {
+        return;
+      }
+
+      // Create container for all announcements
+      const container = document.createElement('div');
+      container.id = 'ga-announcement-container';
+      container.style.cssText = `
+        position: fixed;
+        top: 85px;
+        left: 0;
+        right: 0;
+        z-index: 999999;
+      `;
+
+      // Style colors based on type
+      const styles = {
+        info: { bg: '#e3f2fd', border: '#2196f3', text: '#1565c0' },
+        warning: { bg: '#fff3e0', border: '#ff9800', text: '#e65100' },
+        urgent: { bg: '#ffebee', border: '#f44336', text: '#c62828' }
+      };
+
+      // Render each announcement
+      const self = this;
+      validAnnouncements.forEach((announcement, index) => {
+        const style = styles[announcement.style] || styles.info;
+
+        const announcementDiv = document.createElement('div');
+        announcementDiv.id = 'ga-announcement-' + announcement.id;
+        announcementDiv.style.cssText = `
+          background: ${style.bg};
+          border-bottom: 3px solid ${style.border};
+          padding: 20px 60px 20px 20px;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          font-size: 28px;
+          font-weight: 600;
+          line-height: 1.4;
+          color: ${style.text};
+          text-align: center;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+          position: relative;
+        `;
+
+        announcementDiv.innerHTML = `
+          <span>${announcement.message}</span>
+          <button class="ga-announcement-close" data-announcement-id="${announcement.id}" style="
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            font-size: 32px;
+            cursor: pointer;
+            color: ${style.text};
+            opacity: 0.7;
+            padding: 5px 10px;
+            font-weight: bold;
+          " aria-label="Close announcement">&times;</button>
+        `;
+
+        container.appendChild(announcementDiv);
+
+        // Add close handler
+        const closeButton = announcementDiv.querySelector('.ga-announcement-close');
+        closeButton.addEventListener('click', function() {
+          const id = this.getAttribute('data-announcement-id');
+          self.dismiss(parseInt(id));
+        });
+
+        log('Announcement rendered:', announcement.id);
+      });
+
+      document.body.insertBefore(container, document.body.firstChild);
+    },
+
     render: function(announcement) {
-      if (!announcement || !announcement.is_active) {
+      if (!announcement) {
         return;
       }
 
@@ -423,19 +619,20 @@
       popup.innerHTML = `
         <div style="
           position: fixed;
-          top: 0;
+          top: 85px;
           left: 0;
           right: 0;
           z-index: 999999;
           background: ${style.bg};
           border-bottom: 3px solid ${style.border};
-          padding: 12px 50px 12px 20px;
+          padding: 20px 60px 20px 20px;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          font-size: 14px;
-          line-height: 1.5;
+          font-size: 28px;
+          font-weight: 600;
+          line-height: 1.4;
           color: ${style.text};
           text-align: center;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         ">
           <span>${announcement.message}</span>
           <button id="ga-announcement-close" style="
@@ -445,11 +642,12 @@
             transform: translateY(-50%);
             background: transparent;
             border: none;
-            font-size: 20px;
+            font-size: 32px;
             cursor: pointer;
             color: ${style.text};
             opacity: 0.7;
             padding: 5px 10px;
+            font-weight: bold;
           " aria-label="Close announcement">&times;</button>
         </div>
       `;
@@ -572,11 +770,113 @@
   };
 
   // ==========================================================================
+  // GA4 Analytics Module (Google Analytics 4 gtag.js injection)
+  // ==========================================================================
+
+  const GA4Analytics = {
+    measurementId: null,
+    initialized: false,
+
+    init: async function() {
+      if (!CONFIG.enableGA4) {
+        log('GA4 injection disabled by config');
+        return;
+      }
+
+      // Check if gtag is already present (avoid double-injection)
+      if (window.gtag || document.querySelector('script[src*="googletagmanager.com/gtag"]')) {
+        log('GA4 gtag.js already present, skipping injection');
+        return;
+      }
+
+      // Fetch measurement ID from admin server
+      try {
+        const measurementId = await this.fetchMeasurementId();
+        if (!measurementId) {
+          log('No GA4 measurement ID configured for this site');
+          return;
+        }
+
+        this.measurementId = measurementId;
+        await this.injectGtag();
+        this.initialized = true;
+        log('GA4 Analytics initialized with measurement ID:', measurementId);
+      } catch (e) {
+        warn('GA4 initialization failed:', e);
+      }
+    },
+
+    fetchMeasurementId: async function() {
+      const domain = window.location.hostname;
+      const endpoint = CONFIG.adminUrl + '/api/sdk/ga4-config?domain=' + encodeURIComponent(domain);
+
+      const response = await fetch(endpoint, {
+        method: 'GET',
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (!response.ok) {
+        log('GA4 config fetch failed:', response.status);
+        return null;
+      }
+
+      const data = await response.json();
+      return data.measurementId || null;
+    },
+
+    injectGtag: function() {
+      return new Promise((resolve, reject) => {
+        // Create and inject the gtag.js script
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + this.measurementId;
+
+        script.onload = () => {
+          // Initialize gtag after script loads
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function() { window.dataLayer.push(arguments); };
+          window.gtag('js', new Date());
+          window.gtag('config', this.measurementId, {
+            // Send page_view event
+            send_page_view: true,
+            // Anonymize IP for privacy
+            anonymize_ip: true
+          });
+
+          log('gtag.js loaded and configured');
+          resolve();
+        };
+
+        script.onerror = () => {
+          warn('Failed to load gtag.js');
+          reject(new Error('gtag.js load failed'));
+        };
+
+        // Insert the script
+        const firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+      });
+    },
+
+    // Track a custom event via GA4
+    trackEvent: function(eventName, params) {
+      if (!this.initialized || !window.gtag) {
+        log('GA4 not initialized, cannot track event');
+        return false;
+      }
+
+      window.gtag('event', eventName, params || {});
+      log('GA4 event tracked:', eventName, params);
+      return true;
+    }
+  };
+
+  // ==========================================================================
   // Public API
   // ==========================================================================
 
   window.GAMicrosite = {
-    version: '1.3.3',
+    version: '1.5.5-js',
     config: CONFIG,
 
     // Manual tracking call
@@ -635,6 +935,21 @@
     // Re-process referral links
     processReferralLinks: function() {
       ReferralTracking.processLinks();
+    },
+
+    // Track GA4 event (if GA4 is initialized)
+    trackGA4Event: function(eventName, params) {
+      return GA4Analytics.trackEvent(eventName, params);
+    },
+
+    // Get current GA4 measurement ID (if configured)
+    getGA4MeasurementId: function() {
+      return GA4Analytics.measurementId;
+    },
+
+    // Check if GA4 is initialized
+    isGA4Initialized: function() {
+      return GA4Analytics.initialized;
     }
   };
 
@@ -660,6 +975,7 @@
     TrackingBeacon.init();
     AnnouncementPopup.init();
     ReferralTracking.init();
+    GA4Analytics.init();  // Initialize GA4 analytics (async, non-blocking)
 
     log('SDK fully initialized');
   }

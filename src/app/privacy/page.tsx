@@ -1,6 +1,5 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import WebPageSchema from '@/components/WebPageSchema';
 import { SITE_CONFIG } from '@/lib/constants';
 
@@ -21,8 +20,6 @@ export default function PrivacyPage() {
         title="Privacy Policy"
         description="Privacy policy for Gross Automation's ABB Process Automation services"
       />
-
-      <Breadcrumbs />
 
       <main className="min-h-screen bg-gradient-to-b from-abb-gray-50 to-white">
         <div className="container mx-auto px-4 py-20">

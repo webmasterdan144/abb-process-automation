@@ -97,8 +97,8 @@ const ServicesSection = () => {
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-abb-green mt-1 flex-shrink-0" />
                 <div>
-                  <div className="font-semibold text-abb-gray-800">25+ Years Experience</div>
-                  <div className="text-abb-gray-600 text-sm">Over two decades of expertise in process automation solutions by Gross Automation</div>
+                  <div className="font-semibold text-abb-gray-800">35+ Years Experience</div>
+                  <div className="text-abb-gray-600 text-sm">Over three decades of expertise in process automation solutions by Gross Automation</div>
                 </div>
               </div>
 

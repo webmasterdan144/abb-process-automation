@@ -444,7 +444,7 @@ const IOSystemsPage = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://www.grossautomation.com/products?s=ABB+S800+IO&manufacturers=ABBTOW"
+              href="https://www.grossautomation.com/products?s=ABB+S800+IO&manufacturers=ABB+-+Process+Automation"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"

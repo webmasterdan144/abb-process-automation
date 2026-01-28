@@ -5,11 +5,11 @@ import { SITE_CONFIG } from '@/lib/constants';
 
 export const metadata = {
   title: 'ABB Process Automation Wisconsin | Gross Automation Brookfield WI | Local DCS Experts',
-  description: 'Leading ABB process automation solutions in Wisconsin. Gross Automation based in Brookfield WI serves Milwaukee, Madison, Green Bay with Freelance DCS, System 800xA, Symphony Plus, Measurement & Analytics, digital solutions implementation. 25+ years local experience.',
+  description: 'Leading ABB process automation solutions in Wisconsin. Gross Automation based in Brookfield WI serves Milwaukee, Madison, Green Bay with Freelance DCS, System 800xA, Symphony Plus, Measurement & Analytics, digital solutions implementation. 35+ years local experience.',
   keywords: 'ABB automation Wisconsin, process automation Wisconsin, DCS Wisconsin, Freelance DCS Wisconsin, System 800xA Wisconsin, ABB Brookfield WI, automation Milwaukee, automation Madison, industrial automation Wisconsin, SCADA Wisconsin, PLC Wisconsin, Gross Automation Wisconsin',
   openGraph: {
     title: 'ABB Process Automation Wisconsin | Gross Automation Brookfield WI',
-    description: 'Leading ABB automation solutions in Wisconsin. Local expertise in Brookfield serving Milwaukee, Madison, Green Bay. 25+ years experience.',
+    description: 'Leading ABB automation solutions in Wisconsin. Local expertise in Brookfield serving Milwaukee, Madison, Green Bay. 35+ years experience.',
     url: `${SITE_CONFIG.url}/wisconsin-abb-automation`,
   },
   other: {
@@ -99,7 +99,7 @@ const WisconsinABBAutomationPage = () => {
               'ABB Measurement & Analytics',
               'ABB Digital Solutions'
             ],
-            'description': 'Leading ABB process automation solutions in Wisconsin. Brookfield-based with 25+ years experience serving manufacturing and process industries throughout Wisconsin.'
+            'description': 'Leading ABB process automation solutions in Wisconsin. Brookfield-based with 35+ years experience serving manufacturing and process industries throughout Wisconsin.'
           })
         }}
       />
@@ -123,7 +123,7 @@ const WisconsinABBAutomationPage = () => {
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
                   Gross Automation, based in Brookfield, Wisconsin, has been serving the state&apos;s
-                  manufacturing and process industries for 25+ years with expert ABB automation
+                  manufacturing and process industries for 35+ years with expert ABB automation
                   solutions including Freelance DCS, System 800xA, Symphony Plus, and Compact Control systems.
                 </p>
               </div>

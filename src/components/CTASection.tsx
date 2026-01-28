@@ -78,7 +78,7 @@ const CTASection = () => {
               </a>
 
               <a
-                href="https://www.grossautomation.com/products?s=ABB&manufacturers=ABBTOW"
+                href="https://www.grossautomation.com/products?s=ABB&manufacturers=ABB+-+Process+Automation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-md hover:border-white hover:bg-white/10 transition-colors font-medium"

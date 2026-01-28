@@ -263,10 +263,15 @@ const CompactControlPage = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
 
-                <button className="inline-flex items-center justify-center border-2 border-abb-gray-300 text-abb-gray-700 px-8 py-4 rounded-md hover:border-abb-green hover:text-abb-green transition-colors font-medium">
+                <a
+                  href="https://gross-automation-prod.s3.amazonaws.com/manufacturers/1769612566615file"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center border-2 border-abb-gray-300 text-abb-gray-700 px-8 py-4 rounded-md hover:border-abb-green hover:text-abb-green transition-colors font-medium"
+                >
                   <Download className="mr-2 w-5 h-5" />
                   Download Datasheet
-                </button>
+                </a>
               </div>
             </div>
 
@@ -519,7 +524,7 @@ const CompactControlPage = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://www.grossautomation.com/products?s=ABB+Compact+Product+Suite&manufacturers=ABBTOW"
+              href="https://www.grossautomation.com/products?s=ABB+Compact+Product+Suite&manufacturers=ABB+-+Process+Automation"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"

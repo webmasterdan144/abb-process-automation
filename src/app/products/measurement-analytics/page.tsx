@@ -281,7 +281,7 @@ const MeasurementAnalyticsPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://www.grossautomation.com/products?s=ABB+measurement&manufacturers=ABBTOW"
+                href="https://www.grossautomation.com/products?s=ABB+measurement&manufacturers=ABB+-+Process+Automation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-white text-abb-blue px-8 py-4 rounded-md hover:bg-white/90 transition-colors font-medium"

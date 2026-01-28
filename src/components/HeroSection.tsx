@@ -57,7 +57,7 @@ const HeroSection = () => {
               </Link>
 
               <a
-                href="https://www.grossautomation.com/products?s=ABB&manufacturers=ABBTOW"
+                href="https://www.grossautomation.com/products?s=ABB&manufacturers=ABB+-+Process+Automation"
                 className="inline-flex items-center justify-center border-2 border-abb-gray-300 text-abb-gray-700 px-8 py-4 rounded-md hover:border-primary hover:text-primary transition-colors font-medium"
               >
                 <Search className="mr-2 w-5 h-5" />
@@ -71,7 +71,7 @@ const HeroSection = () => {
               <div className="flex items-center space-x-8 opacity-60">
                 <div className="text-2xl font-bold text-abb-gray-400">ABB</div>
                 <div className="text-lg font-semibold text-abb-gray-400">Gross Automation</div>
-                <div className="text-sm text-abb-gray-400">25+ Years Experience</div>
+                <div className="text-sm text-abb-gray-400">35+ Years Experience</div>
               </div>
             </div>
           </div>

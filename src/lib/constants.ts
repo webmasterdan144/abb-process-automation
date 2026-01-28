@@ -20,7 +20,7 @@ export const EXTERNAL_LINKS = {
 
 export const PARENT_SEARCH = {
   baseUrl: 'https://www.grossautomation.com/products',
-  manufacturer: 'ABBTOW',
+  manufacturer: 'ABB+-+Process+Automation',
 } as const;
 
 export const ANALYTICS = {

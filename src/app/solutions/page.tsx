@@ -353,7 +353,7 @@ const SolutionsPage = () => {
               <h3 className="text-2xl font-semibold text-abb-gray-900 mb-6">Find ABB Products by Industry</h3>
               <div className="space-y-4">
                 <a
-                  href="https://www.grossautomation.com/products?s=ABB&manufacturers=ABBTOW"
+                  href="https://www.grossautomation.com/products?s=ABB&manufacturers=ABB+-+Process+Automation"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
@@ -362,7 +362,7 @@ const SolutionsPage = () => {
                   <ArrowRight className="w-5 h-5 text-primary" />
                 </a>
                 <a
-                  href="https://www.grossautomation.com/products?s=ABB+Freelance+DCS&manufacturers=ABBTOW"
+                  href="https://www.grossautomation.com/products?s=ABB+Freelance+DCS&manufacturers=ABB+-+Process+Automation"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
@@ -371,7 +371,7 @@ const SolutionsPage = () => {
                   <ArrowRight className="w-5 h-5 text-primary" />
                 </a>
                 <a
-                  href="https://www.grossautomation.com/products?s=ABB+800xA&manufacturers=ABBTOW"
+                  href="https://www.grossautomation.com/products?s=ABB+800xA&manufacturers=ABB+-+Process+Automation"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"

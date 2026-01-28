@@ -345,7 +345,7 @@ const System800xAPage = () => {
               <h3 className="text-2xl font-semibold text-abb-gray-900 mb-6">Find 800xA Products</h3>
               <div className="space-y-4">
                 <a
-                  href="https://www.grossautomation.com/products?s=ABB+800xA&manufacturers=ABBTOW"
+                  href="https://www.grossautomation.com/products?s=ABB+800xA&manufacturers=ABB+-+Process+Automation"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
@@ -354,7 +354,7 @@ const System800xAPage = () => {
                   <ArrowRight className="w-5 h-5 text-abb-blue" />
                 </a>
                 <a
-                  href="https://www.grossautomation.com/products?s=ABB+controller+AC800M&manufacturers=ABBTOW"
+                  href="https://www.grossautomation.com/products?s=ABB+controller+AC800M&manufacturers=ABB+-+Process+Automation"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
@@ -363,7 +363,7 @@ const System800xAPage = () => {
                   <ArrowRight className="w-5 h-5 text-abb-blue" />
                 </a>
                 <a
-                  href="https://www.grossautomation.com/products?s=ABB+S800+IO&manufacturers=ABBTOW"
+                  href="https://www.grossautomation.com/products?s=ABB+S800+IO&manufacturers=ABB+-+Process+Automation"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"

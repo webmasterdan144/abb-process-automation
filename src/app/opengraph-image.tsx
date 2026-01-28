@@ -136,7 +136,7 @@ export default async function Image() {
               display: 'flex',
             }}
           >
-            Brookfield, WI · 25+ Years Experience
+            Brookfield, WI · 35+ Years Experience
           </div>
           <div
             style={{

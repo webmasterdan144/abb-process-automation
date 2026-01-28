@@ -20,8 +20,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ABB Process Automation Solutions Wisconsin | Gross Automation | 25+ Years Experience",
-  description: "Leading ABB process automation solutions in Wisconsin & Midwest by Gross Automation. Expert Freelance DCS, System 800xA, Compact Control, Symphony Plus, Measurement & Analytics, and digital solutions. Brookfield, WI based with 25+ years experience serving manufacturing, chemical, oil & gas industries.",
+  title: "ABB Process Automation Solutions Wisconsin | Gross Automation | 35+ Years Experience",
+  description: "Leading ABB process automation solutions in Wisconsin & Midwest by Gross Automation. Expert Freelance DCS, System 800xA, Compact Control, Symphony Plus, Measurement & Analytics, and digital solutions. Brookfield, WI based with 35+ years experience serving manufacturing, chemical, oil & gas industries.",
   keywords: "ABB process automation Wisconsin, Freelance DCS Wisconsin, System 800xA Wisconsin, ABB automation Brookfield WI, industrial automation Wisconsin, DCS integration Wisconsin, SCADA systems Wisconsin, process control Wisconsin, ABB system integrator Wisconsin, Gross Automation, control systems Wisconsin, PLC programming Wisconsin, manufacturing automation Wisconsin, chemical process automation, oil gas automation Wisconsin, power generation automation, Symphony Plus, measurement analytics, flow meter, pressure transmitter, Genix, IIoT, digital twin, cybersecurity",
   authors: [{ name: SITE_CONFIG.name }],
   creator: SITE_CONFIG.name,
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     canonical: SITE_CONFIG.url,
   },
   openGraph: {
-    title: "ABB Process Automation Solutions Wisconsin | Gross Automation | 25+ Years Experience",
-    description: "Leading ABB process automation solutions in Wisconsin & Midwest by Gross Automation. Expert Freelance DCS, System 800xA & Compact Control implementation with 25+ years experience.",
+    title: "ABB Process Automation Solutions Wisconsin | Gross Automation | 35+ Years Experience",
+    description: "Leading ABB process automation solutions in Wisconsin & Midwest by Gross Automation. Expert Freelance DCS, System 800xA & Compact Control implementation with 35+ years experience.",
     url: SITE_CONFIG.url,
     siteName: "Gross Automation - ABB Process Automation Experts Wisconsin",
     images: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@GrossAutomation",
     title: "ABB Process Automation Solutions Wisconsin | Gross Automation",
-    description: "Leading ABB automation solutions in Wisconsin & Midwest. Freelance DCS, System 800xA, Compact Control. 25+ years experience.",
+    description: "Leading ABB automation solutions in Wisconsin & Midwest. Freelance DCS, System 800xA, Compact Control. 35+ years experience.",
     images: [`${SITE_CONFIG.url}/og-image.jpg`],
   },
   verification: {
@@ -199,7 +199,7 @@ export default function RootLayout({
                 "sameAs": [
                   "https://grossautomation.com"
                 ],
-                "description": "Expert ABB process automation solutions including Freelance DCS, System 800xA, and Compact Control systems. Serving Wisconsin, Illinois, and the greater Midwest with 25+ years of experience.",
+                "description": "Expert ABB process automation solutions including Freelance DCS, System 800xA, and Compact Control systems. Serving Wisconsin, Illinois, and the greater Midwest with 35+ years of experience.",
                 "knowsAbout": [
                   "ABB Freelance DCS",
                   "ABB System 800xA",

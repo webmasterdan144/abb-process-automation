@@ -154,6 +154,22 @@ const ControllersPage = () => {
                   "@type": "Answer",
                   "text": "The AC800M is a high-performance controller designed for process automation within ABB System 800xA and Compact Product Suite environments. The AC500 is a scalable PLC family designed for manufacturing automation, building automation, and machine control applications."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between F-line and M-line ABB controllers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The F-line and M-line are parallel product families for distinct applications, not replacements for each other. The F-line (AC700F, AC800F, AC900F) is part of the Freelance DCS and remains an active, supported product line. The M-line (AC800M) is part of the larger System 800xA DCS, offering flexibility and scalability for very large, complex enterprise-level automation. The AC800M did supersede the older AC450 controller range (Advant Master family) for new projects."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between AC700F, AC800F, and AC900F?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "All three are controllers within the Freelance DCS family, differing in processing power, I/O capacity, and redundancy support. AC700F is for small applications (up to ~300 I/Os) with no redundancy and up to 8 direct I/O modules. AC800F handles medium to large applications (~1,000 I/Os) with optional redundancy and modular fieldbus/Ethernet. AC900F is for large applications (up to ~1,500 I/Os) with optional redundancy, up to 10 direct I/O modules, 4 Ethernet ports, 2 serial ports, and up to 4 pluggable fieldbus modules."
+                }
               }
             ]
           })
@@ -212,6 +228,141 @@ const ControllersPage = () => {
                   <p className="text-abb-gray-600 text-sm">{feature.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Understanding Controller Families */}
+      <section className="py-16 bg-abb-blue/5 border-y border-abb-blue/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl lg:text-3xl font-bold text-abb-gray-900 mb-8 text-center">
+              Understanding ABB Controller Families
+            </h2>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+              {/* F-Line vs M-Line */}
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-abb-gray-900 mb-4 flex items-center">
+                  <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary text-sm font-bold mr-3">?</span>
+                  F-Line vs M-Line: What&apos;s the Difference?
+                </h3>
+                <p className="text-abb-gray-700 mb-4">
+                  The F-line and M-line are <strong>parallel product families</strong> designed for distinct applications —
+                  <em>not</em> replacements for each other.
+                </p>
+                <ul className="space-y-3 text-sm text-abb-gray-600">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-abb-green mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>F-Line (AC700F/AC800F/AC900F)</strong> — Part of the <strong>Freelance DCS</strong>.
+                    Active and supported product line for essential process automation needs.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-abb-green mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>M-Line (AC800M)</strong> — Part of the larger <strong>System 800xA DCS</strong>.
+                    A modular controller configurable with Compact Control Builder or 800xA Control Builder,
+                    offering flexibility and scalability for very large, complex enterprise-level automation.</span>
+                  </li>
+                </ul>
+                <p className="text-sm text-abb-gray-500 mt-4 italic">
+                  Note: The AC800M did largely supersede the older AC450 controller range (Advant Master family) for new projects.
+                </p>
+              </div>
+
+              {/* AC700F vs AC800F vs AC900F */}
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-abb-gray-900 mb-4 flex items-center">
+                  <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary text-sm font-bold mr-3">?</span>
+                  AC700F vs AC800F vs AC900F
+                </h3>
+                <p className="text-abb-gray-700 mb-4">
+                  All three are controllers within the <strong>Freelance DCS family</strong>, differing in processing power,
+                  I/O capacity, and redundancy support:
+                </p>
+                <ul className="space-y-3 text-sm text-abb-gray-600">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-abb-green mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>AC700F</strong> — Small applications (up to ~300 I/Os). No redundancy.
+                    Up to 8 direct I/O modules. Compact footprint, ideal for OEM offerings.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-abb-green mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>AC800F</strong> — Medium to large applications (~1,000 I/Os).
+                    Optional controller and line redundancy. Modular fieldbus and Ethernet modules.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-abb-green mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>AC900F</strong> — Large applications (up to ~1,500 I/Os).
+                    Optional redundancy. Up to 10 direct I/O modules. 4 Ethernet ports, 2 serial ports,
+                    up to 4 pluggable fieldbus modules.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Comparison Table */}
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+              <h3 className="text-lg font-semibold text-abb-gray-900 p-4 bg-abb-gray-50 border-b">
+                Freelance Controller Comparison
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead className="bg-abb-gray-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left font-semibold text-abb-gray-700">Specification</th>
+                      <th className="px-4 py-3 text-center font-semibold text-abb-gray-700">AC700F</th>
+                      <th className="px-4 py-3 text-center font-semibold text-abb-gray-700">AC800F</th>
+                      <th className="px-4 py-3 text-center font-semibold text-abb-gray-700">AC900F</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-abb-gray-100">
+                    <tr>
+                      <td className="px-4 py-3 text-abb-gray-700 font-medium">Application Size</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">Small (up to ~300 I/Os)</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">Medium-Large (~1,000 I/Os)</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">Large (up to ~1,500 I/Os)</td>
+                    </tr>
+                    <tr className="bg-abb-gray-50/50">
+                      <td className="px-4 py-3 text-abb-gray-700 font-medium">Redundancy Support</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">No</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">Yes (optional)</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">Yes (optional)</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3 text-abb-gray-700 font-medium">Direct I/O Modules</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">Up to 8</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">Modular</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">Up to 10</td>
+                    </tr>
+                    <tr className="bg-abb-gray-50/50">
+                      <td className="px-4 py-3 text-abb-gray-700 font-medium">Ethernet Ports</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">1</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">Modular</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">4 built-in</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3 text-abb-gray-700 font-medium">Serial Ports</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">1</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">Modular</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">2</td>
+                    </tr>
+                    <tr className="bg-abb-gray-50/50">
+                      <td className="px-4 py-3 text-abb-gray-700 font-medium">Fieldbus Modules</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">—</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">Modular</td>
+                      <td className="px-4 py-3 text-center text-abb-gray-600">Up to 4 pluggable</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="mt-8 p-4 bg-abb-blue/10 rounded-lg text-center">
+              <p className="text-abb-gray-700">
+                <strong>Need help selecting the right controller?</strong> Our experts can guide you to the best fit.
+                <a href="tel:+12622521600" className="text-primary hover:underline ml-1">Call us at +1 (262) 252-1600</a>
+              </p>
             </div>
           </div>
         </div>
@@ -346,7 +497,7 @@ const ControllersPage = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://www.grossautomation.com/products?s=ABB+controller+AC800M&manufacturers=ABBTOW"
+              href="https://www.grossautomation.com/products?s=ABB+controller+AC800M&manufacturers=ABB+-+Process+Automation"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"

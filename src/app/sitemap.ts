@@ -1,9 +1,11 @@
 import { MetadataRoute } from 'next';
+import { states } from '@/data/states';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.abbautomationsales.com';
 
-  return [
+  // Core pages
+  const corePages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -131,4 +133,62 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
   ];
+
+  // Guide pages
+  const guidePages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/guides`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/guides/what-is-freelance-dcs`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/guides/what-is-system-800xa`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/guides/freelance-vs-800xa`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/guides/dcs-vs-plc`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/guides/controller-selection`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/guides/dcs-migration`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+  ];
+
+  // State landing pages (excluding Wisconsin which has dedicated page)
+  const statePages: MetadataRoute.Sitemap = states
+    .filter(state => state.slug !== 'wisconsin')
+    .map(state => ({
+      url: `${baseUrl}/${state.slug}-abb-automation`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }));
+
+  return [...corePages, ...guidePages, ...statePages];
 }

@@ -5,13 +5,13 @@ import GrossAutomationLogo from '@/components/GrossAutomationLogo';
 
 export const metadata = {
   title: 'About Gross Automation - ABB Process Automation Experts',
-  description: 'Learn about Gross Automation, your trusted partner for ABB process automation solutions. 25+ years of experience in system integration and engineering.',
+  description: 'Learn about Gross Automation, your trusted partner for ABB process automation solutions. 35+ years of experience in system integration and engineering.',
   keywords: 'Gross Automation, ABB partner, process automation experts, system integration, industrial automation'
 };
 
 const AboutPage = () => {
   const stats = [
-    { number: '25+', label: 'Years Experience' },
+    { number: '35+', label: 'Years Experience' },
     { number: '500+', label: 'Projects Completed' },
     { number: 'High', label: 'System Availability' },
     { number: 'M-F', label: 'Business Hours Support' }
@@ -36,7 +36,7 @@ const AboutPage = () => {
     {
       icon: <Clock className="w-6 h-6" />,
       title: 'Proven Results',
-      description: 'Over 25 years of successful project delivery across multiple industries with a track record of on-time, on-budget completion.'
+      description: 'Over 35 years of successful project delivery across multiple industries with a track record of on-time, on-budget completion.'
     }
   ];
 
@@ -78,7 +78,7 @@ const AboutPage = () => {
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  For over 25 years, Gross Automation has been providing comprehensive
+                  For over 35 years, Gross Automation has been providing comprehensive
                   ABB process automation solutions, specializing in engineering, system
                   integration, and lifecycle support services.
                 </p>
@@ -118,7 +118,7 @@ const AboutPage = () => {
                 <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0 lg:space-x-6">
                   <div className="text-center lg:text-left">
                     <div className="text-sm font-medium text-abb-gray-700 mb-2">Trusted Partnership</div>
-                    <div className="text-xs text-abb-gray-500">Celebrating 25+ Years of Service</div>
+                    <div className="text-xs text-abb-gray-500">Celebrating 35+ Years of Service</div>
                   </div>
                   <div className="flex-shrink-0">
                     <GrossAutomationLogo width={140} height={45} />

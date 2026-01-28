@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle, Layers, Cpu, Network, Settings, Gauge, Cloud }
 import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = {
-  title: 'ABB Process Automation Products | DCS, Controllers, I/O | Gross Automation',
-  description: 'Complete portfolio of ABB process automation products including Freelance DCS, System 800xA, AC800M controllers, AC500 PLCs, and distributed I/O systems. Expert integration by Gross Automation.',
-  keywords: 'ABB products, process automation, Freelance DCS, System 800xA, ABB controllers, ABB PLCs, I/O systems, Compact Control Builder, Gross Automation'
+  title: 'Shop ABB Automation Products | DCS, Controllers, I/O | Gross Automation',
+  description: 'Shop ABB automation products including Freelance DCS, System 800xA, controllers, and I/O systems. Authorized distributor with expert integration services.',
+  keywords: 'ABB automation products, ABB DCS, ABB controllers, ABB I/O systems, Freelance DCS, System 800xA'
 };
 
 const ProductsPage = () => {
@@ -136,8 +136,8 @@ const ProductsPage = () => {
   return (
     <div className="min-h-screen pt-20">
       <WebPageSchema
-        title="ABB Process Automation Products | DCS, Controllers, I/O | Gross Automation"
-        description="Complete portfolio of ABB process automation products including Freelance DCS, System 800xA, AC800M controllers, AC500 PLCs, and distributed I/O systems. Expert integration by Gross Automation."
+        title="Shop ABB Automation Products | DCS, Controllers, I/O | Gross Automation"
+        description="Shop ABB automation products including Freelance DCS, System 800xA, controllers, and I/O systems. Authorized distributor with expert integration services."
         pageType="ProductPage"
       />
 
@@ -190,14 +190,12 @@ const ProductsPage = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  Complete ABB
-                  <span className="abb-text-gradient block">Automation Portfolio</span>
+                  Shop ABB
+                  <span className="abb-text-gradient block">Automation Products</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  Comprehensive range of ABB process automation products from distributed
-                  control systems to controllers, I/O, and engineering tools. Integrated
-                  solutions by Gross Automation for optimal performance.
+                  Buy ABB automation products from an authorized distributor. Gross Automation supplies DCS platforms, controllers, I/O modules, and instrumentation with expert integration for industrial facilities nationwide.
                 </p>
               </div>
 
@@ -215,7 +213,7 @@ const ProductsPage = () => {
                   href="https://www.grossautomation.com/contact?utm_source=abbatow&utm_medium=website&utm_campaign=secure-redirect"
                   className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium"
                 >
-                  Explore Solutions
+                  Request ABB Quote
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
 

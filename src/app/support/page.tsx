@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, Clock, Phone, Mail, Headphones, Wrench, BookOpen, Users, Shield, Download, AlertTriangle } from 'lucide-react';
 
 export const metadata = {
-  title: 'ABB Automation Support Services | Gross Automation',
-  description: 'Professional ABB automation support services including maintenance, troubleshooting, training, and lifecycle management during business hours. Expert support for all ABB systems.',
-  keywords: 'ABB support, automation maintenance, troubleshooting, training, lifecycle services, technical support'
+  title: 'Get ABB Automation Support | Maintenance & Training | Gross Automation',
+  description: 'Get ABB automation support from Gross Automation. Technical assistance, maintenance, troubleshooting, and training for DCS and SCADA systems.',
+  keywords: 'ABB automation support, DCS support, SCADA support, ABB maintenance, ABB training'
 };
 
 const SupportPage = () => {
@@ -178,14 +178,12 @@ const SupportPage = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  Expert ABB Automation
-                  <span className="abb-text-gradient block">Support & Maintenance</span>
+                  Get ABB Automation
+                  <span className="abb-text-gradient block">Support & Training</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  Maximize your system uptime and performance with our comprehensive
-                  support services, from expert technical assistance to planned maintenance
-                  and optimization programs.
+                  Get ABB automation support from Gross Automation. We provide technical assistance, maintenance, troubleshooting, and training for DCS and SCADA systems to maximize uptime and performance.
                 </p>
               </div>
 

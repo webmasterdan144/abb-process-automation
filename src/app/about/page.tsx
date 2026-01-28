@@ -4,9 +4,9 @@ import { Users, Award, Target, Clock, CheckCircle, ArrowRight } from 'lucide-rea
 import GrossAutomationLogo from '@/components/GrossAutomationLogo';
 
 export const metadata = {
-  title: 'About Gross Automation - ABB Process Automation Experts',
-  description: 'Learn about Gross Automation, your trusted partner for ABB process automation solutions. 35+ years of experience in system integration and engineering.',
-  keywords: 'Gross Automation, ABB partner, process automation experts, system integration, industrial automation'
+  title: 'About Gross Automation | ABB Authorized Distributor | 35+ Years',
+  description: 'Learn about Gross Automation, an ABB authorized distributor with 35+ years experience in DCS and SCADA system integration nationwide.',
+  keywords: 'about Gross Automation, ABB authorized distributor, DCS integrator, SCADA integrator'
 };
 
 const AboutPage = () => {
@@ -73,14 +73,12 @@ const AboutPage = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  Your Trusted ABB
-                  <span className="abb-text-gradient block">Automation Partner</span>
+                  Meet Gross Automation
+                  <span className="abb-text-gradient block">ABB Authorized Distributor</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  For over 35 years, Gross Automation has been providing comprehensive
-                  ABB process automation solutions, specializing in engineering, system
-                  integration, and lifecycle support services.
+                  Learn about Gross Automation, an ABB authorized distributor with 35+ years experience. We provide DCS, SCADA, and control system solutions with engineering, integration, and support services nationwide.
                 </p>
               </div>
 

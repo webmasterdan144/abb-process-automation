@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, Download, Network, Shield, Zap, Cpu } from 'lucide-react';
 
 export const metadata = {
-  title: 'ABB Freelance DCS Solutions by Gross Automation | Authorized Distributor',
-  description: 'Expert ABB Freelance DCS implementation by Gross Automation - Authorized Distributor with AC 700F, AC 800F, and AC 900F controllers, Foundation Fieldbus support, and complete system integration.',
-  keywords: 'ABB Freelance DCS, AC 700F, AC 800F, AC 900F, distributed control system, Foundation Fieldbus, Control Builder F, Gross Automation'
+  title: 'Buy ABB Freelance DCS | AC700F, AC800F, AC900F Controllers | Gross Automation',
+  description: 'Buy ABB Freelance DCS systems and controllers. AC700F, AC800F, AC900F with Foundation Fieldbus support. Authorized distributor with expert integration.',
+  keywords: 'ABB Freelance DCS, buy Freelance DCS, AC700F, AC800F, AC900F, distributed control system'
 };
 
 const FreelancePage = () => {
@@ -157,14 +157,12 @@ const FreelancePage = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  ABB Freelance DCS Solutions
-                  <span className="abb-text-gradient block">by Gross Automation</span>
+                  Buy ABB Freelance DCS
+                  <span className="abb-text-gradient block">Controllers & Systems</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  The ABB Freelance distributed control system combines the advantages of
-                  both DCS and PLC technologies. Gross Automation delivers expert implementation
-                  with decades of experience in process automation.
+                  Buy ABB Freelance DCS from Gross Automation, an authorized distributor. The Freelance platform combines DCS functionality with PLC flexibility using AC700F, AC800F, and AC900F controllers for process industries.
                 </p>
               </div>
 

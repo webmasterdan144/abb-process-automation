@@ -21,12 +21,12 @@ const HeroSection = () => {
               </div>
 
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-abb-gray-900 leading-tight">
-                Complete ABB Process Automation Portfolio
-                <span className="abb-text-gradient block">Solutions by Gross Automation</span>
+                Shop ABB Process Automation
+                <span className="abb-text-gradient block">DCS & SCADA Systems</span>
               </h1>
 
               <p className="text-xl text-abb-gray-600 leading-relaxed">
-                Gross Automation is an authorized distributor of ABB Process Automation products. The portfolio includes three DCS platforms, full instrumentation, controllers, I/O systems, and digital solutions for industrial operations.
+                Buy ABB process automation systems from Gross Automation. We supply Freelance DCS, System 800xA, controllers, I/O modules, and instrumentation with expert integration services for industrial facilities nationwide.
               </p>
             </div>
 
@@ -52,7 +52,7 @@ const HeroSection = () => {
                 href="/products"
                 className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-md hover:bg-primary-dark transition-colors font-medium group"
               >
-                Explore Products
+                ABB Automation Products
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
 
@@ -61,7 +61,7 @@ const HeroSection = () => {
                 className="inline-flex items-center justify-center border-2 border-abb-gray-300 text-abb-gray-700 px-8 py-4 rounded-md hover:border-primary hover:text-primary transition-colors font-medium"
               >
                 <Search className="mr-2 w-5 h-5" />
-                Search Products
+                Search ABB Parts
               </a>
             </div>
 

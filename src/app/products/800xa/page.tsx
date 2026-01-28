@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, Download, Monitor, Server, Shield, Layers, Network, Cpu } from 'lucide-react';
 
 export const metadata = {
-  title: 'ABB System 800xA Solutions by Gross Automation | Authorized Distributor',
-  description: 'Expert ABB System 800xA implementation by Gross Automation - 35+ years experience integrating process control, electrical systems, safety, and information management in comprehensive automation platforms.',
-  keywords: 'ABB System 800xA, extended automation, DCS, electrical control, safety systems, information management, process automation, Gross Automation'
+  title: 'Shop ABB System 800xA | AC800M Controllers & Components | Gross Automation',
+  description: 'Shop ABB System 800xA components and AC800M controllers. Extended automation platform for enterprise facilities. Authorized distributor with integration services.',
+  keywords: 'ABB System 800xA, buy 800xA, AC800M controller, extended automation, enterprise DCS'
 };
 
 const System800xAPage = () => {
@@ -186,14 +186,12 @@ const System800xAPage = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  ABB Ability System 800xA
-                  <span className="text-abb-blue block">by Gross Automation</span>
+                  Shop ABB System 800xA
+                  <span className="text-abb-blue block">Enterprise Automation</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  ABB System 800xA is a comprehensive automation platform,
-                  integrating process control, electrical systems, safety, and telecommunications.
-                  Gross Automation delivers expert implementation with extensive experience.
+                  Buy ABB System 800xA components from Gross Automation. The 800xA platform integrates process control, electrical systems, and safety for enterprise facilities using AC800M controllers and S800 I/O.
                 </p>
               </div>
 

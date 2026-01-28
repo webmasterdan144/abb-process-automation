@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, Download, Cpu, Settings, Zap, Network, Wrench } from 'lucide-react';
 
 export const metadata = {
-  title: 'ABB Compact Product Suite | AC 800M, Safety Controllers, HMI | Gross Automation',
-  description: 'ABB Compact Product Suite for AC 800M controllers, safety controllers, process recorders, HMI, and field interfaces. Engineering and configuration tools for ABB process automation. Available through Gross Automation.',
-  keywords: 'ABB Compact Product Suite, AC 800M, Compact Control Builder, safety controllers, process recorders, HMI, field interfaces, ABB engineering tools, Gross Automation'
+  title: 'Buy ABB Compact Product Suite | AC800M, Safety, HMI | Gross Automation',
+  description: 'Buy ABB Compact Product Suite components. AC800M controllers, safety controllers, HMI panels, and process recorders from an authorized distributor.',
+  keywords: 'buy ABB Compact Product Suite, AC800M, ABB safety controller, ABB HMI, process recorder'
 };
 
 const CompactControlPage = () => {
@@ -245,12 +245,12 @@ const CompactControlPage = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  ABB Compact Product Suite
-                  <span className="text-abb-green block">Engineering Platform</span>
+                  Buy ABB Compact Product Suite
+                  <span className="text-abb-green block">Controllers & HMI</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  The ABB Compact Product Suite encompasses AC 800M controllers, safety controllers, process recorders, HMI interfaces, and field interface modules. Compact Control Builder provides the unified engineering environment for configuration and programming of these devices.
+                  Buy ABB Compact Product Suite components from Gross Automation. The suite includes AC800M controllers, safety controllers, process recorders, HMI panels, and Compact Control Builder engineering software.
                 </p>
               </div>
 

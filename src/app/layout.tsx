@@ -20,9 +20,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ABB Process Automation Solutions Wisconsin | Gross Automation | 35+ Years Experience",
-  description: "Leading ABB process automation solutions in Wisconsin & Midwest by Gross Automation. Expert Freelance DCS, System 800xA, Compact Control, Symphony Plus, Measurement & Analytics, and digital solutions. Brookfield, WI based with 35+ years experience serving manufacturing, chemical, oil & gas industries.",
-  keywords: "ABB process automation Wisconsin, Freelance DCS Wisconsin, System 800xA Wisconsin, ABB automation Brookfield WI, industrial automation Wisconsin, DCS integration Wisconsin, SCADA systems Wisconsin, process control Wisconsin, ABB system integrator Wisconsin, Gross Automation, control systems Wisconsin, PLC programming Wisconsin, manufacturing automation Wisconsin, chemical process automation, oil gas automation Wisconsin, power generation automation, Symphony Plus, measurement analytics, flow meter, pressure transmitter, Genix, IIoT, digital twin, cybersecurity",
+  title: "ABB Process Automation | Shop DCS & SCADA Systems | Gross Automation",
+  description: "Shop ABB process automation systems at Gross Automation. DCS platforms, controllers, I/O modules, and instrumentation with expert integration services nationwide.",
+  keywords: "ABB process automation, ABB DCS, ABB SCADA, Freelance DCS, System 800xA, ABB controllers, process control systems, industrial automation, DCS integration",
   authors: [{ name: SITE_CONFIG.name }],
   creator: SITE_CONFIG.name,
   publisher: SITE_CONFIG.name,
@@ -31,16 +31,16 @@ export const metadata: Metadata = {
     canonical: SITE_CONFIG.url,
   },
   openGraph: {
-    title: "ABB Process Automation Solutions Wisconsin | Gross Automation | 35+ Years Experience",
-    description: "Leading ABB process automation solutions in Wisconsin & Midwest by Gross Automation. Expert Freelance DCS, System 800xA & Compact Control implementation with 35+ years experience.",
+    title: "ABB Process Automation | Shop DCS & SCADA Systems | Gross Automation",
+    description: "Shop ABB process automation systems at Gross Automation. DCS platforms, controllers, I/O modules, and instrumentation with expert integration services nationwide.",
     url: SITE_CONFIG.url,
-    siteName: "Gross Automation - ABB Process Automation Experts Wisconsin",
+    siteName: "Gross Automation - ABB Process Automation Experts",
     images: [
       {
         url: `${SITE_CONFIG.url}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "ABB Process Automation Solutions Wisconsin - Gross Automation",
+        alt: "ABB Process Automation - DCS and SCADA Systems - Gross Automation",
       },
     ],
     locale: "en_US",
@@ -49,22 +49,20 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@GrossAutomation",
-    title: "ABB Process Automation Solutions Wisconsin | Gross Automation",
-    description: "Leading ABB automation solutions in Wisconsin & Midwest. Freelance DCS, System 800xA, Compact Control. 35+ years experience.",
+    title: "ABB Process Automation | Shop DCS & SCADA Systems",
+    description: "Shop ABB process automation systems. DCS platforms, controllers, and instrumentation with expert integration services.",
     images: [`${SITE_CONFIG.url}/og-image.jpg`],
   },
   verification: {
     google: "verification-code-here",
   },
   other: {
-    "geo.region": "US-WI",
-    "geo.placename": "Brookfield, Wisconsin",
-    "geo.position": "43.0642;-88.1834",
-    "ICBM": "43.0642, -88.1834",
-    "DC.title": "ABB Process Automation Solutions Wisconsin",
+    "geo.region": "US",
+    "geo.placename": "United States",
+    "DC.title": "ABB Process Automation - DCS and SCADA Systems",
     "DC.creator": SITE_CONFIG.name,
-    "DC.subject": "ABB automation, process control, industrial automation",
-    "DC.description": "Leading ABB process automation solutions in Wisconsin",
+    "DC.subject": "ABB automation, DCS, SCADA, process control",
+    "DC.description": "Shop ABB process automation systems nationwide",
     "revisit-after": "7 days",
   },
 };

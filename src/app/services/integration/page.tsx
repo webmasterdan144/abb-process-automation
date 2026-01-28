@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle, Layers, Zap, Network, Settings, Clock, Shield 
 import CTASection from '@/components/CTASection';
 
 export const metadata = {
-  title: 'System Integration Services - ABB Automation | Gross Automation',
-  description: 'Expert ABB automation system integration services by Gross Automation. Seamless integration of DCS, SCADA, PLC, and industrial control systems with 35+ years experience.',
-  keywords: 'system integration, ABB integration, DCS integration, SCADA integration, PLC integration, industrial automation integration'
+  title: 'Get ABB System Integration | DCS & SCADA | Gross Automation',
+  description: 'Get ABB system integration services from Gross Automation. Seamless DCS, SCADA, and PLC integration with 35+ years experience nationwide.',
+  keywords: 'ABB system integration, DCS integration, SCADA integration, control system integration'
 };
 
 const SystemIntegrationPage = () => {

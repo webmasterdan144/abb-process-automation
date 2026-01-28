@@ -29,12 +29,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `ABB Process Automation ${stateData.name} | Gross Automation | DCS & Control Systems`,
-    description: `Leading ABB process automation solutions in ${stateData.name}. Expert Freelance DCS, System 800xA, Symphony Plus, Measurement & Analytics implementation serving ${stateData.majorCities.slice(0, 3).join(', ')}. 35+ years experience.`,
-    keywords: `ABB automation ${stateData.name}, process automation ${stateData.name}, DCS ${stateData.name}, Freelance DCS ${stateData.name}, System 800xA ${stateData.name}, industrial automation ${stateData.name}, SCADA ${stateData.name}, Gross Automation`,
+    title: `Find ABB Automation ${stateData.name} | DCS & SCADA Systems | Gross Automation`,
+    description: `Find ABB automation in ${stateData.name}. DCS and SCADA systems for ${stateData.majorCities.slice(0, 2).join(' and ')} from an authorized distributor with nationwide service.`,
+    keywords: `ABB automation ${stateData.name}, DCS ${stateData.name}, SCADA ${stateData.name}, process automation ${stateData.name}`,
     openGraph: {
-      title: `ABB Process Automation ${stateData.name} | Gross Automation`,
-      description: `Leading ABB automation solutions in ${stateData.name}. Serving ${stateData.majorCities.slice(0, 3).join(', ')} with 35+ years experience.`,
+      title: `Find ABB Automation ${stateData.name} | Gross Automation`,
+      description: `Find ABB automation in ${stateData.name}. DCS and SCADA systems with nationwide service.`,
       url: `${SITE_CONFIG.url}/${stateData.slug}-abb-automation`,
     },
     other: {
@@ -135,12 +135,12 @@ export default async function StatePage({ params }: PageProps) {
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 mb-6">
-              ABB Process Automation
-              <span className="abb-text-gradient block">{stateData.name}</span>
+              Find ABB Automation
+              <span className="abb-text-gradient block">in {stateData.name}</span>
             </h1>
 
             <p className="text-xl text-abb-gray-600 mb-6">
-              {stateData.description}
+              Find ABB automation systems in {stateData.name}. Gross Automation supplies DCS, SCADA, controllers, and instrumentation to {stateData.majorCities.slice(0, 3).join(', ')} and facilities statewide.
             </p>
 
             <div className="bg-abb-blue/5 border border-abb-blue/20 rounded-lg p-4 mb-8 text-sm text-abb-gray-700">

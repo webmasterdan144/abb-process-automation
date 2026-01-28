@@ -3,9 +3,9 @@ import { ArrowRight, CheckCircle, Droplets, Gauge, Thermometer, Radio, Activity,
 import SearchLink from '@/components/SearchLink';
 
 export const metadata = {
-  title: 'ABB Measurement & Analytics | Flow, Pressure, Temperature, Level | Gross Automation',
-  description: 'ABB Measurement & Analytics instrumentation including flow meters, pressure transmitters, temperature sensors, level measurement, and analytical instruments. Available through Gross Automation.',
-  keywords: 'ABB flow meter, ABB pressure transmitter, ABB temperature sensor, ABB level measurement, ABB analytical instruments, ABB measurement, Coriolis flow meter, electromagnetic flow meter, Gross Automation',
+  title: 'Shop ABB Instrumentation | Flow Meters, Transmitters, Analyzers | Gross Automation',
+  description: 'Shop ABB instrumentation including flow meters, pressure transmitters, temperature sensors, and analyzers. Authorized distributor with technical support.',
+  keywords: 'buy ABB flow meter, ABB pressure transmitter, ABB instrumentation, ABB analyzers'
 };
 
 const MeasurementAnalyticsPage = () => {
@@ -135,12 +135,12 @@ const MeasurementAnalyticsPage = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  ABB Measurement
-                  <span className="text-abb-blue block">& Analytics</span>
+                  Shop ABB
+                  <span className="text-abb-blue block">Instrumentation</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  ABB Measurement & Analytics provides a complete range of instrumentation for flow, pressure, temperature, level, and analytical measurement. These instruments serve process industries from oil and gas to water treatment and food production. Gross Automation is an authorized distributor of ABB measurement products.
+                  Buy ABB instrumentation from Gross Automation. We supply flow meters, pressure transmitters, temperature sensors, level instruments, and analyzers for process industries including oil & gas, water treatment, and chemical manufacturing.
                 </p>
               </div>
 

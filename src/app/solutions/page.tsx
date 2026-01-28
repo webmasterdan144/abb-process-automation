@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle, Factory, Zap, Droplets, Fuel, Wheat, PillBottl
 import { SITE_CONFIG } from '@/lib/constants';
 
 export const metadata = {
-  title: 'ABB Automation Solutions by Industry | Gross Automation',
-  description: 'Comprehensive ABB process automation solutions tailored for oil & gas, chemical, power, water, food & beverage, pharmaceutical, and manufacturing industries.',
-  keywords: 'ABB solutions, process automation, industrial automation, oil gas automation, chemical process control, power plant automation, life sciences automation, mining automation, aluminum smelter control, cement automation, data center automation, marine automation, ports terminals automation, refining automation, printing automation, metals processing automation'
+  title: 'Find ABB Automation Solutions by Industry | Gross Automation',
+  description: 'Find ABB automation solutions for oil & gas, chemical, power, water, and manufacturing industries. DCS and SCADA systems with expert integration services.',
+  keywords: 'ABB automation solutions, industrial automation, DCS solutions, SCADA solutions, process automation'
 };
 
 const SolutionsPage = () => {
@@ -189,12 +189,11 @@ const SolutionsPage = () => {
               </span>
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 mb-6 leading-tight">
-              Tailored ABB Automation
+              Find ABB Automation
               <span className="abb-text-gradient block">Solutions by Industry</span>
             </h1>
             <p className="text-xl text-abb-gray-600 max-w-3xl mx-auto">
-              ABB automation solutions designed to optimize your operations
-              and improve safety across a wide range of industries.
+              Find ABB automation solutions for your industry. Gross Automation provides DCS and SCADA systems for oil & gas, chemical, power, water, and manufacturing facilities nationwide.
             </p>
           </div>
 

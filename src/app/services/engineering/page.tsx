@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle, Lightbulb, FileText, Cpu, Network, Shield } fr
 import CTASection from '@/components/CTASection';
 
 export const metadata = {
-  title: 'System Engineering Services - ABB Automation | Gross Automation',
-  description: 'Professional ABB automation system engineering services by Gross Automation. Expert design and engineering for DCS, SCADA, and industrial control systems with 35+ years experience.',
-  keywords: 'system engineering, ABB automation engineering, DCS design, SCADA engineering, control system design, industrial automation engineering'
+  title: 'Get ABB Engineering Services | DCS & SCADA Design | Gross Automation',
+  description: 'Get ABB automation engineering services from Gross Automation. Expert DCS and SCADA design with 35+ years experience in industrial control systems.',
+  keywords: 'ABB engineering services, DCS design, SCADA engineering, control system design'
 };
 
 const SystemEngineeringPage = () => {

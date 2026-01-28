@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle, Cpu, Settings, Zap, Shield, Clock, Users } fro
 import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = {
-  title: 'ABB Controllers & PLCs | AC800M, AC500 Series | Gross Automation',
-  description: 'Complete range of ABB controllers and PLCs including AC800M high-performance controllers, AC500 scalable PLCs, and PM864 process controllers. Expert integration by Gross Automation.',
-  keywords: 'ABB controllers, ABB PLCs, AC800M, AC500 series, PM864, process controllers, automation controllers, industrial controllers, Gross Automation'
+  title: 'Buy ABB Controllers | AC800M, AC700F, AC800F, AC900F | Gross Automation',
+  description: 'Buy ABB controllers for DCS and SCADA systems. AC800M, AC700F, AC800F, AC900F, and AC500 PLCs from an authorized distributor with integration support.',
+  keywords: 'buy ABB controllers, AC800M, AC700F, AC800F, AC900F, ABB DCS controllers, ABB PLCs'
 };
 
 const ControllersPage = () => {
@@ -189,14 +189,12 @@ const ControllersPage = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  Advanced ABB
-                  <span className="abb-text-gradient block">Controllers & PLCs</span>
+                  Buy ABB Controllers
+                  <span className="abb-text-gradient block">DCS & PLC Systems</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  Complete range of ABB controllers from high-performance AC800M systems
-                  to scalable AC500 PLCs, engineered for reliability and precision in
-                  demanding industrial applications.
+                  Buy ABB controllers from Gross Automation. We supply F-line controllers (AC700F, AC800F, AC900F) for Freelance DCS, M-line controllers (AC800M) for System 800xA, and AC500 PLCs for machine automation.
                 </p>
               </div>
 

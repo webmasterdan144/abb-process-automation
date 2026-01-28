@@ -5,9 +5,9 @@ import { SITE_CONFIG } from '@/lib/constants';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'ABB Automation Guides & Knowledge Base | Gross Automation',
-  description: 'Comprehensive guides to ABB process automation: Freelance DCS, System 800xA, controller selection, DCS vs PLC, migration strategies. Expert knowledge from 35+ years of implementation experience.',
-  keywords: 'ABB automation guides, Freelance DCS guide, System 800xA guide, DCS vs PLC, ABB controller selection, process automation knowledge base',
+  title: 'Learn ABB Automation | DCS & SCADA Guides | Gross Automation',
+  description: 'Learn ABB process automation with expert guides on Freelance DCS, System 800xA, controller selection, and DCS migration from 35+ years experience.',
+  keywords: 'learn ABB automation, ABB DCS guide, Freelance DCS guide, System 800xA guide, DCS vs PLC'
 };
 
 export default function GuidesIndex() {
@@ -70,12 +70,11 @@ export default function GuidesIndex() {
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 mb-6">
-              ABB Automation Guides
+              Learn ABB Automation
             </h1>
 
             <p className="text-xl text-abb-gray-600">
-              Expert knowledge from 35+ years of ABB process automation implementation.
-              Learn about DCS systems, controller selection, and best practices.
+              Learn ABB process automation with expert guides from Gross Automation. Comprehensive resources on DCS systems, SCADA, controller selection, and migration strategies from 35+ years experience.
             </p>
           </div>
         </div>

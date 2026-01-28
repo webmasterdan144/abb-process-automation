@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle, Play, FileCheck, Users, Clock, Shield, Zap } f
 import CTASection from '@/components/CTASection';
 
 export const metadata = {
-  title: 'Commissioning Services - ABB Automation | Gross Automation',
-  description: 'Professional ABB automation commissioning services by Gross Automation. Expert startup, testing, and validation of DCS, SCADA, and industrial control systems with 35+ years experience.',
-  keywords: 'commissioning services, ABB commissioning, system startup, testing validation, DCS commissioning, SCADA commissioning'
+  title: 'Get ABB Commissioning Services | DCS Startup & Testing | Gross Automation',
+  description: 'Get ABB commissioning services from Gross Automation. Expert DCS and SCADA startup, testing, and validation with 35+ years experience.',
+  keywords: 'ABB commissioning, DCS commissioning, system startup, control system testing'
 };
 
 const CommissioningPage = () => {

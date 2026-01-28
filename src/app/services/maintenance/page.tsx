@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle, Wrench, Clock, Shield, BarChart3, AlertTriangl
 import CTASection from '@/components/CTASection';
 
 export const metadata = {
-  title: 'Maintenance Services - ABB Automation | Gross Automation',
-  description: 'Professional ABB automation maintenance services by Gross Automation. Preventive maintenance, troubleshooting, and lifecycle support during business hours with 35+ years experience.',
-  keywords: 'ABB maintenance, automation maintenance, preventive maintenance, DCS maintenance, SCADA maintenance, system support'
+  title: 'Get ABB Maintenance Services | DCS & SCADA Support | Gross Automation',
+  description: 'Get ABB maintenance services from Gross Automation. Preventive maintenance and troubleshooting for DCS and SCADA systems with 35+ years experience.',
+  keywords: 'ABB maintenance, DCS maintenance, SCADA maintenance, automation support'
 };
 
 const MaintenancePage = () => {

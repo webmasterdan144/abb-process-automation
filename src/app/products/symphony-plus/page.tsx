@@ -3,9 +3,9 @@ import { ArrowRight, CheckCircle, Download, Network, Shield, Layers, Monitor } f
 import SearchLink from '@/components/SearchLink';
 
 export const metadata = {
-  title: 'ABB Ability Symphony Plus DCS | Total Plant Automation | Gross Automation',
-  description: 'ABB Ability Symphony Plus is a total plant automation platform for power generation and water industries. Backward compatible with Network 90, INFI 90, Symphony Harmony, and Contronic systems. Available through Gross Automation.',
-  keywords: 'ABB Symphony Plus, Symphony Plus DCS, total plant automation, power generation automation, water automation, Network 90 migration, INFI 90, Symphony Harmony, SDe Series, Gross Automation',
+  title: 'Buy ABB Symphony Plus DCS | Power & Water Automation | Gross Automation',
+  description: 'Buy ABB Symphony Plus DCS for power generation and water treatment. Backward compatible with Network 90, INFI 90, and Symphony Harmony systems.',
+  keywords: 'buy ABB Symphony Plus, Symphony Plus DCS, power plant DCS, water treatment automation'
 };
 
 const SymphonyPlusPage = () => {
@@ -143,12 +143,12 @@ const SymphonyPlusPage = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  ABB Ability Symphony Plus
-                  <span className="abb-text-gradient block">Total Plant Automation</span>
+                  Buy ABB Symphony Plus
+                  <span className="abb-text-gradient block">Power & Water DCS</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  ABB Ability Symphony Plus is a total plant automation platform designed for power generation and water industries. The platform integrates process control, electrical control, and plant optimization into a unified system. Gross Automation is an authorized distributor of ABB Process Automation products including Symphony Plus.
+                  Buy ABB Symphony Plus DCS from Gross Automation. Symphony Plus provides total plant automation for power generation and water treatment with backward compatibility for Network 90, INFI 90, and Symphony Harmony systems.
                 </p>
               </div>
 

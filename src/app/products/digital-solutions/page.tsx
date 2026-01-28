@@ -3,9 +3,9 @@ import { ArrowRight, CheckCircle, Cloud, Shield, Cpu, BarChart3, Smartphone, Glo
 import SearchLink from '@/components/SearchLink';
 
 export const metadata = {
-  title: 'ABB Digital Solutions | Genix, IIoT, Digital Twin, Cybersecurity | Gross Automation',
-  description: 'ABB digital transformation solutions including Genix Industrial IoT, Asset Performance Management, Digital Twin, emissions monitoring, OPC UA connectivity, and IEC 62443 cybersecurity. Available through Gross Automation.',
-  keywords: 'ABB Genix, ABB digital twin, ABB IIoT, ABB cybersecurity, IEC 62443, ABB APM, ABB Datalyzer, OPC UA, edge computing, ABB mobile operations, Gross Automation',
+  title: 'Buy ABB Digital Solutions | Genix IIoT, Digital Twin, Cybersecurity | Gross Automation',
+  description: 'Buy ABB digital solutions including Genix IIoT, digital twin, asset management, and IEC 62443 cybersecurity services for industrial automation.',
+  keywords: 'buy ABB Genix, ABB digital twin, ABB IIoT, ABB cybersecurity, IEC 62443'
 };
 
 const DigitalSolutionsPage = () => {
@@ -129,12 +129,12 @@ const DigitalSolutionsPage = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  ABB Digital
-                  <span className="text-abb-green block">Transformation Solutions</span>
+                  Buy ABB Digital
+                  <span className="text-abb-green block">Solutions & IIoT</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  ABB provides digital solutions that connect industrial operations to data analytics, artificial intelligence, and cloud platforms. The ABB Ability Genix suite enables Industrial IoT, asset performance management, digital twin simulation, and emissions monitoring. Gross Automation is an authorized distributor of ABB Process Automation products.
+                  Buy ABB digital solutions from Gross Automation. We provide Genix IIoT, digital twin, asset performance management, and IEC 62443 cybersecurity services to modernize industrial operations.
                 </p>
               </div>
 

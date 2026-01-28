@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle, BookOpen, Users, Monitor, Award, Clock, FileTe
 import CTASection from '@/components/CTASection';
 
 export const metadata = {
-  title: 'Training & Support Services - ABB Automation | Gross Automation',
-  description: 'Professional ABB automation training and support services by Gross Automation. Operator training, maintenance training, and technical support with 35+ years experience.',
-  keywords: 'ABB training, automation training, operator training, maintenance training, technical support, DCS training'
+  title: 'Get ABB Automation Training | DCS & SCADA Courses | Gross Automation',
+  description: 'Get ABB automation training from Gross Automation. Operator and maintenance training for DCS and SCADA systems with 35+ years experience.',
+  keywords: 'ABB training, DCS training, SCADA training, automation training, operator training'
 };
 
 const TrainingPage = () => {

@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle, Network, Zap, Shield, Settings, Database, Cpu 
 import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = {
-  title: 'ABB I/O Systems | S800, S900 Distributed I/O | Gross Automation',
-  description: 'Complete range of ABB I/O systems including S800 distributed I/O, S900 remote I/O, and field-mounted I/O modules. Expert integration and support by Gross Automation.',
-  keywords: 'ABB I/O systems, S800 I/O, S900 I/O, distributed I/O, remote I/O, field I/O, process I/O, digital I/O, analog I/O, Gross Automation'
+  title: 'Shop ABB I/O Modules | S800, S900 Distributed I/O | Gross Automation',
+  description: 'Shop ABB I/O modules including S800 and S900 distributed I/O for DCS systems. Analog, digital, and communication modules from an authorized distributor.',
+  keywords: 'buy ABB I/O, S800 I/O, S900 I/O, ABB I/O modules, distributed I/O, DCS I/O'
 };
 
 const IOSystemsPage = () => {
@@ -187,14 +187,12 @@ const IOSystemsPage = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-abb-gray-900 leading-tight">
-                  Advanced ABB
-                  <span className="abb-text-gradient block">I/O Systems</span>
+                  Shop ABB I/O
+                  <span className="abb-text-gradient block">Modules & Systems</span>
                 </h1>
 
                 <p className="text-xl text-abb-gray-600 leading-relaxed">
-                  Comprehensive range of ABB I/O systems including S800 distributed I/O
-                  and S900 remote I/O solutions. Engineered for reliability and precision
-                  in the most demanding industrial environments.
+                  Buy ABB I/O modules from Gross Automation. We supply S800 distributed I/O and S900 remote I/O for Freelance DCS and System 800xA applications with analog, digital, and communication modules.
                 </p>
               </div>
 

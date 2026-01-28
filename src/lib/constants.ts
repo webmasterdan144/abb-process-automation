@@ -24,7 +24,8 @@ export const PARENT_SEARCH = {
 } as const;
 
 export const ANALYTICS = {
-  gtmId: process.env.NEXT_PUBLIC_GTM_ID || 'G-0F775G82W4',
+  gtmId: process.env.NEXT_PUBLIC_GTM_ID || process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || 'G-RBZ0RCLVWZ',
+  ga4MeasurementId: process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || 'G-RBZ0RCLVWZ',
 } as const;
 
 export const SOCIAL_LINKS = {

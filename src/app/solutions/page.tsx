@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Factory, Zap, Droplets, Fuel, Wheat, PillBottle, TreePine, Pickaxe, Anchor, Building2, Package, Flame, Settings } from 'lucide-react';
+import { SITE_CONFIG } from '@/lib/constants';
 
 export const metadata = {
   title: 'ABB Automation Solutions by Industry | Gross Automation',
@@ -154,7 +155,7 @@ const SolutionsPage = () => {
                 "addressCountry": "US"
               },
               "telephone": "+1-262-252-1600",
-              "url": "https://www.abbautomationsales.com"
+              "url": SITE_CONFIG.url
             },
             "areaServed": [
               "Wisconsin",
